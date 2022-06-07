@@ -1,0 +1,102 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+:root {
+  
+  --main-green: #0ecd88;
+  --main-green-hover: rgba(14, 205, 136, .7);
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+.btn {
+  background: var(--main-green)!important;
+  color: #fff!important;  
+  /* width: 250px!important;   */
+}
+.body-text {
+  line-height: 2.0 !important;
+  font-weight: 500;
+}
+
+.course {
+  color: var(--main-green)!important;
+  border: 1px solid var(--main-green)!important;
+  border-radius: 29px!important;  
+}
+
+.btn:hover, .btn:focus {
+  background: var(--main-green-hover)!important;
+  border-color: var(--main-green-hover)!important;
+}
+
+form {
+  max-width: 500px;
+}
+
+form input {
+  border: 2px solid var(--main-green);              
+}
+
+::placeholder {
+  color: black;
+}
+
+input[disabled] {
+  opacity: .2;
+}
+
+@media (max-width: 725px){
+  .btn {
+    background: var(--main-green)!important;
+    color: #fff!important; 
+  }
+  #tutor-form, #student-form {
+    width: 100%!important;
+  }
+}
+
+
+body {
+  overflow-x: hidden;
+}
+
+/* Test css rule that should improve page load speeds */
+section + section {
+  content-visibility: auto;
+}
+
+
+/* Custom Scroll Bar */
+
+@media (min-width: 725px){
+::-webkit-scrollbar-thumb {
+  background: var(--main-green);
+  border-radius: 5px;
+}
+::-webkit-scrollbar {
+  background: #F3F4F6;
+}
+::-webkit-scrollbar-track {
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3) inset;
+}
+
+::-webkit-scrollbar-button {
+  background: var(--main-green-hover);
+}
+}
+
+/* Animation Section */
+
+
+
