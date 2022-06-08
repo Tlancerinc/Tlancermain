@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/Tlancermain/static/css/main.8b119416.css",
+    "main.js": "/Tlancermain/static/js/main.3f7e619e.js",
+    "static/media/student-img.webp": "/Tlancermain/static/media/student-img.458fcac560c6f2e67c22.webp",
+    "static/media/instructor.webp": "/Tlancermain/static/media/instructor.11d3d7f15156e394c4ec.webp",
+    "static/media/blueSuitMan.webp": "/Tlancermain/static/media/blueSuitMan.604def3426f8dde022dc.webp",
+    "static/media/hero-img.webp": "/Tlancermain/static/media/hero-img.fea689db77f7c7491924.webp",
+    "static/media/manHoldingRedFolder.webp": "/Tlancermain/static/media/manHoldingRedFolder.b3b120d0fde8fcc844b1.webp",
+    "index.html": "/Tlancermain/index.html",
+    "static/media/smallVector.svg": "/Tlancermain/static/media/smallVector.b0047b9ddc1c1a88acedd213cf2e1891.svg",
+    "main.8b119416.css.map": "/Tlancermain/static/css/main.8b119416.css.map",
+    "main.3f7e619e.js.map": "/Tlancermain/static/js/main.3f7e619e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8b119416.css",
+    "static/js/main.3f7e619e.js"
+  ]
+}
