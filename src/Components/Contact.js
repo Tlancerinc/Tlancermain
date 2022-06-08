@@ -1,4 +1,7 @@
-// import contactImage from "../images/contact-img.webp";
+import microsoft from "../images/MicrosoftLogo.webp";
+import tecklink from "../images/TechLink_Logo.webp";
+import tbc from "../images/tbcBank.webp";
+import bankOfGeorgia from "../images/bankOfGeorgia.webp";
 const ContactUs = () => {
   return (
     <>
@@ -22,7 +25,28 @@ const ContactUs = () => {
           </div>
 
           <div className="text-center container-fluid my-5 px-4">
-            Logos here.
+            <div className="row align-items-center justify-content-between">
+              <div className="col-lg-3">
+                <img className="img-fluid" src={tecklink} alt="tecklink logo" />
+              </div>
+              <div className="col-lg-3">
+                <img className="img-fluid" src={tbc} alt="tbc logo" />
+              </div>
+              <div className="col-lg-3">
+                <img
+                  className="img-fluid"
+                  src={bankOfGeorgia}
+                  alt="bank of Georgia logo"
+                />
+              </div>
+              <div className="col-lg-3">
+                <img
+                  className="img-fluid"
+                  src={microsoft}
+                  alt="microsoft logo"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
