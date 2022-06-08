@@ -80,7 +80,8 @@ const Testimonies = () => {
           <div className="row mb-5">
             <div className="col text-center col-md-10 mx-auto mb-5 d-flex align-items-center justify-content-evenly">
               <i className="fa-solid fa-quote-left red-quote"></i>
-              <h2 className="h1 fw-bold">Testimonies from Our Customers</h2>
+              {/* Testimonies from Our Customers */}
+              <h2 className="h1 fw-bold">მომხმარებელთა შეფასება</h2>
               <i className="fa-solid fa-quote-right red-quote"></i>
             </div>
           </div>
@@ -92,15 +93,14 @@ const Testimonies = () => {
                 <i className="fa-solid fa-quote-left blue-quote mt-5"></i>
                 <div className="card-text">
                   <p className="lh-lg text-black fw-bold text-opacity-75 mb-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                    aliquam, purus sit amet luctus venenatis, lectus magna
-                    fringilla urna, porttitor rhoncus dolor purus non enim
-                    praesent elem
+                    სწრაფი, მოსახერხებელი და კომფორტული საშუალებაა ონლაინ
+                    კურსების შესასწავლად. თილანსერის სივრცე ძალიან დამეხმარა
+                    მარტივად შემესწავლა ქოფირაითინგი სულ რაღაც 3 თვეში.
                   </p>
                 </div>
-                <div className="fw-bold card-title h5">Huey</div>
+                <div className="fw-bold card-title h5">ლუკა ბასილაძე</div>
                 <div className="text-secondary card-subtitle h6 mb-5">
-                  Back-end developer at Fintech
+                  აღმასრულებელი დირექტორი, თექლინქი
                 </div>
               </div>
             </div>
@@ -113,16 +113,16 @@ const Testimonies = () => {
                 <i className="fa-solid fa-quote-left blue-quote"></i>
                 <div className="card-text">
                   <p className="lh-lg text-black fw-bold text-opacity-75 mb-4">
-                    LLorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                    aliquam, purus sit amet luctus venenatis, lectus magna
-                    fringilla urna, porttitor rhoncus dolor purus non enim
-                    praesent elem
+                    თილანსერი დამეხმარა მასწავლებლის შერჩევაში და სტუდენტური
+                    მუშაობის გამარტივებაში. მარტივად ვიპოვე მათემატიკის
+                    მასწავლებელი და ახლა უკვე ციფრულად ვახერხებ საგაკვეთილო
+                    პროცესზე დასწრებას!
                   </p>
                 </div>
-                <div className="fw-bold card-title h5">Josh</div>
-                <div className="text-secondary card-subtitle h6">
-                  UI Designer
+                <div className="fw-bold card-title h5">
+                  გიორგი ასლამაზიშვილი
                 </div>
+                <div className="text-secondary card-subtitle h6">სტუდენტი</div>
               </div>
             </div>
           </div>
@@ -138,15 +138,13 @@ const Testimonies = () => {
                 <i className="fa-solid fa-quote-left blue-quote"></i>
                 <div className="card-text">
                   <p className="lh-lg text-black fw-bold text-opacity-75 mb-4">
-                    LLorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                    aliquam, purus sit amet luctus venenatis, lectus magna
-                    fringilla urna, porttitor rhoncus dolor purus non enim
-                    praesent elem
+                    მარტივად გავიარე რეგისტრაცია და დავიწყე ჯგუფების შექმნა.
+                    თილანსერთან ერთად მიმარტივდება სალექციო პროცესების მართვა
                   </p>
                 </div>
-                <div className="fw-bold card-title h5">Josh</div>
+                <div className="fw-bold card-title h5">ელზა ფულაძე</div>
                 <div className="text-secondary card-subtitle h6">
-                  UI Designer
+                  ფიზიკის მასწავლებელი
                 </div>
               </div>
             </div>
@@ -156,15 +154,15 @@ const Testimonies = () => {
                 <i className="fa-solid fa-quote-left blue-quote mt-5"></i>
                 <div className="card-text">
                   <p className="lh-lg text-black fw-bold text-opacity-75 mb-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                    aliquam, purus sit amet luctus venenatis, lectus magna
-                    fringilla urna, porttitor rhoncus dolor purus non enim
-                    praesent elem
+                    თილანსერი მართლაც, რომ მიგნებაა ჩემთვის. ფუნქციონალი
+                    მეხმარება კალენდარით ვმართო თავისუფალი დრო და უპრობლემოდ
+                    ჩავატარო ჯგუფური მეცადინეობები. მადლობა გუნდს ამ
+                    ტექნოლოგიისთვის!
                   </p>
                 </div>
-                <div className="fw-bold card-title h5">Huey</div>
+                <div className="fw-bold card-title h5">ანზორ ქევხიშვილი</div>
                 <div className="text-secondary card-subtitle h6 mb-5">
-                  Back-end developer at Fintech
+                  ლექტორი, პროგრამირება
                 </div>
               </div>
             </div>

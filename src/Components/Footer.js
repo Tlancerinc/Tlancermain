@@ -1,4 +1,6 @@
 const Footer = () => {
+  const date = new Date();
+  const year = date.getFullYear();
   return (
     <>
       <style type="text/css">
@@ -25,16 +27,13 @@ const Footer = () => {
 
             <div className="col-10">
               <div className="col ms-0 ps-0 border-bottom border-light">
-                <h2 className="fw-bold display-5 text-white">Tlancer</h2>
-                <p className="h6 lh-base fw-normal">
-                  Design amazing digital experiences that create more happy in
-                  the world.
-                </p>
+                <h2 className="fw-bold display-5 text-white">თილანსერი</h2>
+                <p className="h6 lh-base fw-normal">საგანმანათლებლო სივრცე</p>
               </div>
               {/* _____ Social Icon Row  */}
               <div className="row pt-4 align-items-center mb-0 mt-2">
                 <div className="h6 col-10 px-0 col-lg-5 mx-auto mx-lg-0 text-center text-lg-start fw-light mb-4 mb-lg-0">
-                  © 2077 Tlancer. All rights reserved.
+                  © {year} თილანსერი ყველა უფლება დაცულია
                 </div>
                 <div className="col-lg-2"></div>
                 <div className="col-lg-5">

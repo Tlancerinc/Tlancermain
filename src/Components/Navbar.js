@@ -143,65 +143,72 @@ const NavbarMain = () => {
           >
             <ul className="nav navbar-nav w-100 justify-content-end">
               <li className="nav-item mb-md-0">
+                {/* HOME */}
                 <a
                   className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2"
                   href="#hero-target"
                 >
-                  Home
+                  მთავარი
                 </a>
               </li>
 
               <li className="nav-item mb-md-0">
+                {/* Student */}
                 <a
                   className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2"
                   href="#student-target"
                 >
-                  Student
+                  სტუდენტი
                 </a>
               </li>
 
               <li className="nav-item mb-md-0">
+                {/* Tutor */}
                 <a
                   className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2"
                   href="#tutor-target"
                 >
-                  Tutor
+                  მასწავლებელი
                 </a>
               </li>
 
               <li className="nav-item mb-md-0">
+                {/* Our Mission */}
                 <a
                   className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2 text-nowrap"
                   href="#mission-target"
                 >
-                  Our Mission
+                  მისია
                 </a>
               </li>
 
               <li className="nav-item mb-md-0">
+                {/* About Us */}
                 <a
                   className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2 text-nowrap"
                   href="#about-target"
                 >
-                  About Us
+                  რატომ ჩვენ?
                 </a>
               </li>
 
               <li className="nav-item mb-md-0">
+                {/* Testimonials */}
                 <a
                   className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2 text-nowrap"
                   href="#testimonials-target"
                 >
-                  Testimonials
+                  შეფასება
                 </a>
               </li>
 
               <li className="nav-item mb-md-0">
+                {/* Contact Us */}
                 <a
                   className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2 fs-xl-1 text-nowrap"
                   href="#contact-target"
                 >
-                  Contact Us
+                  პარტნიორები
                 </a>
               </li>
             </ul>

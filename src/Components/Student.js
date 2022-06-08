@@ -117,26 +117,33 @@ const Student = (props) => {
 
           <div className="container d-flex flex-column-reverse flex-lg-row-reverse mx-auto text-center text-lg-start">
             <div className="col-lg-6 px-0 ps-lg-3 my-auto">
-              <h2 className={`fw-bold h1`}>Register and join other students</h2>
+              {/* Register and join other students */}
+              <h2 className={`fw-bold h1`}>დარეგისტრირდი როგორც სტუდენტი</h2>
               <p className="body-text fs-4 text-dark my-3">
-                Join thousands of other students on Tlancer to teach millions
+                {/* Join thousands of other students on Tlancer to teach millions
                 across the globe. We provide the tools and skills to teach what
-                you love.
+                you love. */}
+                ჩვენ გიმარტივებთ მასწავლებლების პოვნისა და მათთან დაკავშირების
+                საშუალებას სრულიად უფასოდ
               </p>
               <div className="container-fluid px-0 d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-lg-start mt-lg-5">
                 <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2">
-                  AI-powered matching
+                  {/* AI-powered matching */}
+                  ონლაინ ინტერაქციები
                 </div>
                 <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2">
-                  100% free matching
+                  {/* 100% free matching */}
+                  გამოცდილი მასწავლებლები
                 </div>
               </div>
               <div className="container-fluid px-0 d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-lg-start">
                 <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2">
-                  NFT Certtificatons
+                  {/* NFT Certtificatons */}
+                  ურისკო გადახდები
                 </div>
                 <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2">
-                  Offline interactions
+                  {/* Offline interactions */}
+                  დავალებების მენეჯმენტი
                 </div>
               </div>
               <button
@@ -145,7 +152,8 @@ const Student = (props) => {
                 className="mt-5 px-4 btn btn-lg text-nowrap"
                 aria-label="Toggle tutor sign-up form"
               >
-                Sign Up Today
+                {/* Sign Up Today */}
+                რეგისტრაცია
               </button>
               <form
                 id="student-form"
@@ -155,11 +163,12 @@ const Student = (props) => {
               >
                 {/* Honeypot */}
                 <input type="text" name="_honey" style={{ display: "none" }} />
+
                 <input
                   id="first-name-student"
                   className="my-3 fs-4 p-1 ps-2 rounded s-input"
                   type="text"
-                  placeholder="First Name"
+                  placeholder="სახელი"
                   name="name"
                   required
                 />
@@ -167,7 +176,7 @@ const Student = (props) => {
                   id="last-name-student"
                   className="my-3 fs-4 p-1 ps-2 rounded s-input"
                   type="text"
-                  placeholder="Surname"
+                  placeholder="გვარი"
                   name="surname"
                   required
                 />
@@ -175,7 +184,7 @@ const Student = (props) => {
                   id="email-student"
                   className="my-3 fs-4 p-1 ps-2 rounded s-input"
                   type={"email"}
-                  placeholder="Email Address"
+                  placeholder="ელ-ფოსტა"
                   name="email"
                   required
                 />
@@ -183,7 +192,7 @@ const Student = (props) => {
                   id="phone-student"
                   className="my-3 fs-4 p-1 ps-2 rounded s-input"
                   type={"phone"}
-                  placeholder="Phone Number"
+                  placeholder="მობილური"
                   name="phone"
                   required
                 />
@@ -192,7 +201,7 @@ const Student = (props) => {
                   type="submit"
                   className="tutor-btn mt-3 px-2 btn btn-lg text-nowrap w-100 s-input"
                 >
-                  Submit
+                  გაგზავნა
                 </button>
                 {/* <button type="reset" className="tutor-btn mt-3 px-2 btn btn-lg">
                   Reset

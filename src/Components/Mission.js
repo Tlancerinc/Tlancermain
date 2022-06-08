@@ -25,16 +25,13 @@ const Mission = () => {
             />
           </div>
           <div className="col col-lg-6 text-center text-lg-start m-auto px-0 px-lg-5">
-            <h2 className="fw-bold display-4 h1">Our Mission</h2>
+            {/* Our Mission */}
+            <h2 className="fw-bold display-4 h1">მისია</h2>
             <p className="fs-4 fw-light pb-lg-1 pt-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris,
-              nullam vivamus massa orci eros, adipiscing ut velit. Quis
-              scelerisque sit duis ut eget ornare. Id sed porttitor est odio
-              quis in egestas. Dignissim nec id amet blandit semper.Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Mauris, nullam
-              vivamus massa orci eros, adipiscing ut velit. Quis scelerisque sit
-              duis ut eget ornare. Id sed porttitor est odio quis in egestas.
-              Dignissim nec id amet blandit semper.
+              თილანსერი მიზნად ისახავს, შექმნას ულიმიტო საგანმანათლებლო სივრცე
+              მოტივირებული ადამიანებისთვის გლობალური მასშტაბით, სადაც მათ
+              საშუალება ექნებათ, შეისწავლონ მათთვის საინტერესო კურსები, სახლიდან
+              გაუსვლელად.
             </p>
           </div>
         </div>

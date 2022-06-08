@@ -24,6 +24,7 @@ const Tutor = (props) => {
     const surName = document.getElementById("last-name-tutor");
     const email = document.getElementById("email-tutor");
     const phone = document.getElementById("phone-tutor");
+    const subjectTutor = document.getElementById("subject-tutor");
     const requestSettings = {
       method: "POST",
       headers: {
@@ -35,6 +36,7 @@ const Tutor = (props) => {
         surname: `${surName.value}`,
         email: `${email.value}`,
         phone: `${phone.value}`,
+        subject: `${subjectTutor}`,
         role: "Tutor",
       }),
     };
@@ -95,26 +97,34 @@ const Tutor = (props) => {
         <div className="container-fluid">
           <div className="container d-flex flex-column flex-lg-row mx-auto text-center text-lg-start">
             <div className="col-lg-6 px-0 order-2 order-lg-1 ps-lg-3 my-auto">
-              <h2 className={`fw-bold h1`}>Become a Tutor Today</h2>
+              {/* Become a Tutor Today */}
+              <h2 className={`fw-bold h1`}>
+                დარეგისტრირდი როგორც მასწავლებელი
+              </h2>
               <p className="body-text fs-4 text-dark my-3">
-                Join thousands of other instructors on Tlancer to teach millions
+                {/* Join thousands of other instructors on Tlancer to teach millions
                 across the globe. We provide the tools and skills to teach what
-                you love.
+                you love. */}
+                შექმენით კურსები და დაიწყეთ მოსწავლეების მიღება ციფრულად
               </p>
               <div className="container-fluid px-0 d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-lg-start">
                 <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2">
-                  Group-conversations
+                  {/* Group-conversations */}
+                  კურსების მენეჯმენტი
                 </div>
                 <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2">
-                  Tlancer-powered messenger
+                  {/* Tlancer-powered messenger */}
+                  კალენდარი
                 </div>
               </div>
               <div className="container-fluid px-0 d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-lg-start">
                 <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2">
-                  Financial management tools
+                  {/* Financial management tools */}
+                  ფინანსური მენეჯერი
                 </div>
                 <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2">
-                  Task management tools
+                  {/* Task management tools */}
+                  ვირტუალური შეხვედრები
                 </div>
               </div>
               <button
@@ -123,7 +133,8 @@ const Tutor = (props) => {
                 className="mt-5 px-4 btn btn-lg text-nowrap"
                 aria-label="Toggle tutor sign-up form"
               >
-                Sign Up Today
+                რეგისტრაცია
+                {/* Sign Up Today */}
               </button>
               <form
                 id="tutor-form"
@@ -135,7 +146,7 @@ const Tutor = (props) => {
                   id="first-name-tutor"
                   className="my-3 fs-4 p-1 ps-2 rounded t-input"
                   type={"text"}
-                  placeholder="First Name"
+                  placeholder="სახელი"
                   name="first-name"
                   required
                 />
@@ -143,7 +154,7 @@ const Tutor = (props) => {
                   id="last-name-tutor"
                   className="my-3 fs-4 p-1 ps-2 rounded t-input"
                   type={"text"}
-                  placeholder="Surname"
+                  placeholder="გვარი"
                   name="sur-name"
                   required
                 />
@@ -151,7 +162,7 @@ const Tutor = (props) => {
                   id="email-tutor"
                   className="my-3 fs-4 p-1 ps-2 rounded t-input"
                   type={"email"}
-                  placeholder="Email Address"
+                  placeholder="ელ-ფოსტა"
                   name="e-mail"
                   required
                 />
@@ -159,15 +170,23 @@ const Tutor = (props) => {
                   id="phone-tutor"
                   className="my-3 fs-4 p-1 ps-2 rounded t-input"
                   type={"phone"}
-                  placeholder="Phone Number"
+                  placeholder="მობილური"
                   name="phone-number"
+                  required
+                />
+                <input
+                  id="subject-tutor"
+                  className="my-3 fs-4 p-1 ps-2 rounded t-input"
+                  type={"text"}
+                  placeholder="საგანი"
+                  name="subject-tutor"
                   required
                 />
                 <button
                   type="submit"
                   className="tutor-btn mt-3 px-2 btn btn-lg text-nowrap w-100 t-input"
                 >
-                  Submit
+                  გაგზავნა
                 </button>
                 {/* <button
                   type="reset"
