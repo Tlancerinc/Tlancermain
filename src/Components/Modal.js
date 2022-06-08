@@ -22,26 +22,30 @@ const Modal = (props) => {
         className="thank-you container-fluid m-0 p-5"
       >
         <div className="row">
+          <div className="col-lg-2"></div>
           {props.isLoading ? (
-            <div className="col bg-white p-5 rounded text-center">
-              <h1>Submitting...</h1>
+            <div className="col col-lg-8 bg-white p-5 rounded text-center">
+              <h1>გაგზავნა</h1>
             </div>
           ) : (
-            <div className="col bg-white p-5 rounded text-center">
-              <p>Submission received</p>
-              <h1 className="fw-bold">Thank You For Signing Up</h1>
+            <div className="col col-lg-8 bg-white p-5 rounded text-center">
+              <h1 className="fw-bold lh-lg">
+                თქვენი მონაცემები გაგზავნილია! აპლიკაციის საბოლოო ჩაშვებისთანავე
+                თქვენ მიიღებთ დამატებით ინფორმაციას მეილზე
+              </h1>
 
               <button
                 onClick={() => {
                   props.setModalIsOpen(false);
                   props.disableForm();
                 }}
-                className="btn mt-3"
+                className="btn btn-lg mt-3"
               >
-                Dismiss
+                დახურვა
               </button>
             </div>
           )}
+          <div className="col-lg-2"></div>
         </div>
       </div>
     </>

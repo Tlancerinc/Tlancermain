@@ -36,7 +36,7 @@ const Tutor = (props) => {
         surname: `${surName.value}`,
         email: `${email.value}`,
         phone: `${phone.value}`,
-        subject: `${subjectTutor}`,
+        subject: `${subjectTutor.value}`,
         role: "Tutor",
       }),
     };
