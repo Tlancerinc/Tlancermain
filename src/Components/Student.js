@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Modal from "./Modal";
-import studentImg from "../images/student-img.webp";
+import studentImg from "../images/student-img.png";
 
 const Student = (props) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -127,21 +127,21 @@ const Student = (props) => {
                 საშუალებას სრულიად უფასოდ
               </p>
               <div className="container-fluid px-0 d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-lg-start mt-lg-5">
-                <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2">
+                <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2 bubble bubble-red">
                   {/* AI-powered matching */}
                   ონლაინ ინტერაქციები
                 </div>
-                <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2">
+                <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2 bubble bubble-green">
                   {/* 100% free matching */}
                   გამოცდილი მასწავლებლები
                 </div>
               </div>
               <div className="container-fluid px-0 d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-lg-start">
-                <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2">
+                <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2 bubble bubble-blue">
                   {/* NFT Certtificatons */}
                   ურისკო გადახდები
                 </div>
-                <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2">
+                <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2 bubble bubble-yellow">
                   {/* Offline interactions */}
                   დავალებების მენეჯმენტი
                 </div>

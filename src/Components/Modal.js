@@ -23,28 +23,23 @@ const Modal = (props) => {
       >
         <div className="row">
           <div className="col-lg-2"></div>
-          {props.isLoading ? (
-            <div className="col col-lg-8 bg-white p-5 rounded text-center">
-              <h1>გაგზავნა</h1>
-            </div>
-          ) : (
-            <div className="col col-lg-8 bg-white p-5 rounded text-center">
-              <h1 className="fw-bold lh-lg">
-                თქვენი მონაცემები გაგზავნილია! აპლიკაციის საბოლოო ჩაშვებისთანავე
-                თქვენ მიიღებთ დამატებით ინფორმაციას მეილზე
-              </h1>
+          <div className="col col-lg-8 bg-white p-5 rounded text-center">
+            <h1 className="fw-bold lh-lg">
+              თქვენი მონაცემები გაგზავნილია! აპლიკაციის საბოლოო ჩაშვებისთანავე
+              თქვენ მიიღებთ დამატებით ინფორმაციას მეილზე
+            </h1>
 
-              <button
-                onClick={() => {
-                  props.setModalIsOpen(false);
-                  props.disableForm();
-                }}
-                className="btn btn-lg mt-3"
-              >
-                დახურვა
-              </button>
-            </div>
-          )}
+            <button
+              onClick={() => {
+                props.setModalIsOpen(false);
+                props.disableForm();
+              }}
+              className="btn btn-lg mt-3"
+            >
+              დახურვა
+            </button>
+          </div>
+
           <div className="col-lg-2"></div>
         </div>
       </div>

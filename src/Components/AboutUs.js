@@ -1,4 +1,4 @@
-import aboutImage from "../images/blueSuitMan.webp";
+import aboutImage from "../images/blueSuitMan.png";
 const About = () => {
   return (
     <>

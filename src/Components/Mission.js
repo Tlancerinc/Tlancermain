@@ -1,4 +1,4 @@
-import missionImage from "../images/manHoldingRedFolder.webp";
+import missionImage from "../images/manHoldingRedFolder.png";
 const Mission = () => {
   return (
     <>

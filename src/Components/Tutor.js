@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Modal from "./Modal";
-import tutorImg from "../images/instructor.webp";
+import tutorImg from "../images/instructor.png";
 
 const Tutor = (props) => {
   const [tModalIsOpen, setTModalIsOpen] = useState(false);
@@ -108,21 +108,21 @@ const Tutor = (props) => {
                 შექმენით კურსები და დაიწყეთ მოსწავლეების მიღება ციფრულად
               </p>
               <div className="container-fluid px-0 d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-lg-start">
-                <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2">
+                <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2 bubble  bubble-red">
                   {/* Group-conversations */}
                   კურსების მენეჯმენტი
                 </div>
-                <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2">
+                <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2 bubble  bubble-green">
                   {/* Tlancer-powered messenger */}
                   კალენდარი
                 </div>
               </div>
               <div className="container-fluid px-0 d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-lg-start">
-                <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2">
+                <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2 bubble  bubble-blue">
                   {/* Financial management tools */}
                   ფინანსური მენეჯერი
                 </div>
-                <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2">
+                <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2 bubble  bubble-yellow">
                   {/* Task management tools */}
                   ვირტუალური შეხვედრები
                 </div>
