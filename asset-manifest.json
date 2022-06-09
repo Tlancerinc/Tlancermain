@@ -1,19 +1,23 @@
 {
   "files": {
-    "main.css": "/Tlancermain/static/css/main.8b119416.css",
-    "main.js": "/Tlancermain/static/js/main.3f7e619e.js",
-    "static/media/student-img.webp": "/Tlancermain/static/media/student-img.458fcac560c6f2e67c22.webp",
-    "static/media/instructor.webp": "/Tlancermain/static/media/instructor.11d3d7f15156e394c4ec.webp",
-    "static/media/blueSuitMan.webp": "/Tlancermain/static/media/blueSuitMan.604def3426f8dde022dc.webp",
-    "static/media/hero-img.webp": "/Tlancermain/static/media/hero-img.fea689db77f7c7491924.webp",
-    "static/media/manHoldingRedFolder.webp": "/Tlancermain/static/media/manHoldingRedFolder.b3b120d0fde8fcc844b1.webp",
+    "main.css": "/Tlancermain/static/css/main.78269c95.css",
+    "main.js": "/Tlancermain/static/js/main.b6ffaf96.js",
+    "static/media/student-img.png": "/Tlancermain/static/media/student-img.89b7cee0e36473e8ef6b.png",
+    "static/media/instructor.png": "/Tlancermain/static/media/instructor.87f581e5cfb404163b42.png",
+    "static/media/blueSuitMan.png": "/Tlancermain/static/media/blueSuitMan.edc754520adb53973132.png",
+    "static/media/manHoldingRedFolder.png": "/Tlancermain/static/media/manHoldingRedFolder.8e875cf5d8e4d1e6b802.png",
+    "static/media/hero-img.png": "/Tlancermain/static/media/hero-img.ef2ee148968a85cf8e11.png",
+    "static/media/techLink.webp": "/Tlancermain/static/media/techLink.7f1c9a066b9be40414ce.webp",
+    "static/media/bankOfGeorgia.webp": "/Tlancermain/static/media/bankOfGeorgia.ca9a76d90ca54f6c9512.webp",
+    "static/media/MicrosoftLogo.webp": "/Tlancermain/static/media/MicrosoftLogo.a6e473be3a1b783076ba.webp",
+    "static/media/tbcBank.webp": "/Tlancermain/static/media/tbcBank.1382dce8f2734b364b94.webp",
     "index.html": "/Tlancermain/index.html",
     "static/media/smallVector.svg": "/Tlancermain/static/media/smallVector.b0047b9ddc1c1a88acedd213cf2e1891.svg",
-    "main.8b119416.css.map": "/Tlancermain/static/css/main.8b119416.css.map",
-    "main.3f7e619e.js.map": "/Tlancermain/static/js/main.3f7e619e.js.map"
+    "main.78269c95.css.map": "/Tlancermain/static/css/main.78269c95.css.map",
+    "main.b6ffaf96.js.map": "/Tlancermain/static/js/main.b6ffaf96.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b119416.css",
-    "static/js/main.3f7e619e.js"
+    "static/css/main.78269c95.css",
+    "static/js/main.b6ffaf96.js"
   ]
 }
