@@ -42,7 +42,7 @@ const Student = (props) => {
       setModalIsOpen(true);
       setIsLoading(true);
       const formResponse = await fetch(
-        "https://formsubmit.co/ajax/guthribm@gmail.com",
+        "https://formsubmit.co/ajax/tlancerinc@gmail.com",
         requestSettings
       );
       if (!formResponse.ok) {
