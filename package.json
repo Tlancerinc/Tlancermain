@@ -1,7 +1,7 @@
 {
   "name": "tlancer-landing-page-v2",
   "version": "0.9.0",
-  "homepage": "https://www.tlancer.ge",
+  "homepage": "https://tlancer.ge",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
