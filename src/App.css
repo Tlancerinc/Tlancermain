@@ -1,5 +1,3 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 :root {
@@ -46,11 +44,19 @@ form {
 }
 
 form input {
-  border: 2px solid var(--main-green);              
+  border: 2px solid var(--main-green);
+  font-style: italic;  
+  font-weight: bold;            
+}
+
+form input:focus {
+  transform: scale(1.05);
 }
 
 ::placeholder {
-  color: black;
+  color: rgba(0,0,0,0.7);
+  font-style: normal;
+  font-weight: normal;
 }
 
 input[disabled] {

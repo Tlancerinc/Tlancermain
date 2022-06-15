@@ -51,16 +51,6 @@ const Footer = () => {
                         target={"_blank"}
                         rel={"noreferrer"}
                         className="foot-link"
-                        href="https://twitter.com/"
-                      >
-                        <i className="fa-brands fa-twitter h2"></i>
-                      </a>
-                    </div>
-                    <div className="col">
-                      <a
-                        target={"_blank"}
-                        rel={"noreferrer"}
-                        className="foot-link"
                         href="https://www.linkedin.com/company/tlancer/"
                       >
                         <i className="fa-brands fa-linkedin h2"></i>

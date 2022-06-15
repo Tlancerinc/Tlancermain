@@ -25,7 +25,7 @@ const NavbarMain = () => {
                color: var(--main-green);              
                text-decoration: none;
                cursor:pointer;
-               outline: none;               
+               outline: none;
             }
             .logo:hover, .logo:focus {
                 color: var(--main-green-hover);
@@ -67,7 +67,7 @@ const NavbarMain = () => {
                 color: #000;               
                 transition: .3s ease-out;
                 cursor: pointer;
-                
+                padding-bottom: 0;
             }
             .nav-link-hover:hover, .nav-link:focus {
               color: var(--main-green-hover);  
@@ -119,9 +119,9 @@ const NavbarMain = () => {
 
             `}
       </style>
-      <div className="nav navbar navbar-custom fixed-top navbar-expand-md">
-        <div className="container-fluid gx-0 align-items-lg-end px-2 py-1 px-md-4 pt-md-3 pb-md-2">
-          <a href="/" className="navbar-brand d-flex me-0 logo fw-bold fs-1">
+      <div className="nav navbar navbar-custom fixed-top navbar-expand-md py-1">
+        <div className="container-fluid gx-0 align-items-lg-end px-2 pt-1 pb-0 px-md-4">
+          <a href="/" className="me-0 logo fw-bold fs-1 py-0">
             Tlancer
           </a>
 

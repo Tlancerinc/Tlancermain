@@ -60,6 +60,11 @@ const Student = (props) => {
   return (
     <>
       <style type="text/css">{`
+            #student-green-deco {
+              left: 3rem;
+              bottom: -4rem;
+            }
+            
             #student-form {
               position: relative;                     
               display: none;
@@ -81,14 +86,14 @@ const Student = (props) => {
           disableStudentForm();
         }}
       />
-      <section id="student" className="px-0 p-md-5 bg-white">
+      <section id="student" className="px-0 pb-md-5 bg-white">
         <div id="student-target" className="link-target"></div>
 
         <div className="container-fluid">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="123"
-            height="133"
+            width="153"
+            height="163"
             viewBox="0 0 123 133"
             fill="none"
             id="student-green-deco"
@@ -119,7 +124,7 @@ const Student = (props) => {
             <div className="col-lg-6 px-0 ps-lg-3 my-auto">
               {/* Register and join other students */}
               <h2 className={`fw-bold h1`}>დარეგისტრირდი როგორც სტუდენტი</h2>
-              <p className="body-text fs-4 text-dark my-3">
+              <p id="hero-btn-target" className="body-text fs-4 text-dark my-3">
                 {/* Join thousands of other students on Tlancer to teach millions
                 across the globe. We provide the tools and skills to teach what
                 you love. */}
@@ -208,7 +213,7 @@ const Student = (props) => {
                 </button> */}
               </form>
             </div>
-            <div className="col-lg-6 text-start mt-5 mt-lg-0">
+            <div className="col-lg-6 text-start mt-0">
               <img
                 className="img-fluid small-img"
                 alt="woman holding folders holding pencil"

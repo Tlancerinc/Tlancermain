@@ -24,40 +24,64 @@ const ContactUs = () => {
           <div className="text-center container-fluid my-5 px-4">
             <div className="row align-items-center justify-content-between">
               <div className="col-lg-3">
-                <img
-                  className="img-fluid tl-logo my-3"
-                  src={tecklink}
-                  alt="tecklink logo"
-                  width={"512"}
-                  height={"512"}
-                />
+                <a
+                  target={"_blank"}
+                  rel={"noreferrer"}
+                  href="https://www.tbcbank.ge/web/ka"
+                >
+                  <img
+                    className="img-fluid tl-logo my-3"
+                    src={tecklink}
+                    alt="tecklink logo"
+                    width={"512"}
+                    height={"512"}
+                  />
+                </a>
               </div>
               <div className="col-lg-3">
-                <img
-                  className="img-fluid partner my-3"
-                  src={tbc}
-                  alt="tbc logo"
-                  width={"500"}
-                  height={"250"}
-                />
+                <a
+                  target={"_blank"}
+                  rel={"noreferrer"}
+                  href="https://www.tbcbank.ge/web/ka"
+                >
+                  <img
+                    className="img-fluid partner my-3"
+                    src={tbc}
+                    alt="tbc logo"
+                    width={"500"}
+                    height={"250"}
+                  />
+                </a>
               </div>
               <div className="col-lg-3">
-                <img
-                  className="img-fluid partner my-3"
-                  src={bankOfGeorgia}
-                  alt="bank of Georgia logo"
-                  width={"415"}
-                  height={"121"}
-                />
+                <a
+                  target={"_blank"}
+                  rel={"noreferrer"}
+                  href="https://bankofgeorgia.ge/"
+                >
+                  <img
+                    className="img-fluid partner my-3"
+                    src={bankOfGeorgia}
+                    alt="bank of Georgia logo"
+                    width={"415"}
+                    height={"121"}
+                  />
+                </a>
               </div>
               <div className="col-lg-3">
-                <img
-                  className="img-fluid partner my-5"
-                  src={microsoft}
-                  alt="microsoft logo"
-                  width={"512"}
-                  height={"109"}
-                />
+                <a
+                  target={"_blank"}
+                  rel={"noreferrer"}
+                  href="https://www.microsoft.com/"
+                >
+                  <img
+                    className="img-fluid partner my-5"
+                    src={microsoft}
+                    alt="microsoft logo"
+                    width={"512"}
+                    height={"109"}
+                  />
+                </a>
               </div>
             </div>
           </div>

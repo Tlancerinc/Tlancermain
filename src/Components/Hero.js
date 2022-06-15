@@ -31,7 +31,7 @@ const Hero = () => {
             backgroundRepeat: "no-repeat",
             backgroundPosition: "50% 20%",
           }}
-          className="container-fluid d-flex flex-column flex-md-row align-items-start text-center text-md-start pt-5 mb-lg-5 px-2 mx-0 mt-5"
+          className="container-fluid d-flex flex-column flex-md-row align-items-start text-center text-md-start pt-5 px-2 mx-0 mt-5"
         >
           <div className="col-lg-1"></div>
           <div className="col-md-6 col-lg-5 px-lg-0 mb-0 py-5 my-xl-5 text-xl-start">
@@ -44,7 +44,7 @@ const Hero = () => {
               ჩვენთან ერთად
             </p>
             {/* Get Started */}
-            <a href="#student-target" className="btn px-5 btn-lg">
+            <a href="#hero-btn-target" className="btn px-5 btn-lg">
               დაიწყე
             </a>
           </div>
