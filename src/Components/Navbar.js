@@ -1,4 +1,18 @@
 const NavbarMain = () => {
+  const menuLinks = document.querySelectorAll(".nav-link");
+  const navBarNav = document.getElementById("responsive-navbar-nav");
+  const hamburgerBtn = document.getElementById("hamburger-btn");
+  const menuLinkHandler = () => {
+    console.log("button clicked: ");
+    navBarNav.classList.remove("show");
+    hamburgerBtn.classList.add("collapsed");
+    hamburgerBtn.ariaExpanded = false;
+  };
+
+  for (let i = 0; i < menuLinks.length; i++) {
+    menuLinks[i].addEventListener("click", menuLinkHandler);
+  }
+
   return (
     <>
       <style type="text/css">
@@ -94,6 +108,9 @@ const NavbarMain = () => {
               z-index: 1000;
             }   
                      
+            #responsive-navbar-nav {
+              transition: .3s all ease-in-out;
+            }
             
             {/* ######## START MEDIA QUERIES ########*/}
             
