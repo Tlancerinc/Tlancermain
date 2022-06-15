@@ -46,11 +46,14 @@ form {
 form input {
   border: 2px solid var(--main-green);
   font-style: italic;  
-  font-weight: bold;            
+  font-weight: bold; 
+  transition: .2s all ease-in;           
 }
 
 form input:focus {
   transform: scale(1.05);
+  outline: none;
+  box-shadow: 0px 0px 18px rgba(14, 205, 136, .7);  
 }
 
 ::placeholder {
@@ -58,6 +61,7 @@ form input:focus {
   font-style: normal;
   font-weight: normal;
 }
+
 
 input[disabled] {
   opacity: .2;
