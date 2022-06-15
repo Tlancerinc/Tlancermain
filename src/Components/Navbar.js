@@ -1,17 +1,22 @@
+import { useEffect } from "react";
 const NavbarMain = () => {
-  const menuLinks = document.querySelectorAll(".nav-link");
-  const navBarNav = document.getElementById("responsive-navbar-nav");
-  const hamburgerBtn = document.getElementById("hamburger-btn");
-  const menuLinkHandler = () => {
-    console.log("button clicked: ");
-    navBarNav.classList.remove("show");
-    hamburgerBtn.classList.add("collapsed");
-    hamburgerBtn.ariaExpanded = false;
-  };
+  useEffect(() => {
+    const menuLinks = document.querySelectorAll(".nav-link");
+    const navBarNav = document.getElementById("responsive-navbar-nav");
+    const hamburgerBtn = document.getElementById("hamburger-btn");
+    const menuLinkHandler = () => {
+      console.log("button clicked");
+      navBarNav.classList.remove("show");
+      hamburgerBtn.classList.add("collapsed");
+      hamburgerBtn.ariaExpanded = false;
+      console.log("linkHandler finished");
+    };
 
-  for (let i = 0; i < menuLinks.length; i++) {
-    menuLinks[i].addEventListener("click", menuLinkHandler);
-  }
+    for (let i = 0; i < menuLinks.length; i++) {
+      console.log("added event listener");
+      menuLinks[i].addEventListener("click", menuLinkHandler);
+    }
+  }, []);
 
   return (
     <>
