@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 const NavbarMain = () => {
   useEffect(() => {
-    const menuLinks = document.querySelectorAll(".nav-link");
+    const menuLinks = document.querySelectorAll("nav .nav-link");
     const navBarNav = document.getElementById("responsive-navbar-nav");
     const hamburgerBtn = document.getElementById("hamburger-btn");
     const menuLinkHandler = () => {
@@ -141,102 +141,104 @@ const NavbarMain = () => {
 
             `}
       </style>
-      <div className="nav navbar navbar-custom fixed-top navbar-expand-md py-1">
-        <div className="container-fluid gx-0 align-items-lg-end px-2 pt-1 pb-0 px-md-4">
-          <a href="/" className="me-0 logo fw-bold fs-1 py-0">
-            Tlancer
-          </a>
+      <header>
+        <nav className="nav navbar navbar-custom fixed-top navbar-expand-md py-1">
+          <div className="container-fluid gx-0 align-items-lg-end px-2 pt-1 pb-0 px-md-4">
+            <a href="/" className="me-0 logo fw-bold fs-1 py-0">
+              Tlancer
+            </a>
 
-          <button
-            id="hamburger-btn"
-            aria-controls="responsive-navbar-nav"
-            className="navbar-toggler collapsed p-1 my-2"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#responsive-navbar-nav"
-            data-bs-auto-close="true"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div
-            className="navbar-collapse collapse w-100"
-            id="responsive-navbar-nav"
-          >
-            <ul className="nav navbar-nav w-100 justify-content-end">
-              <li className="nav-item mb-md-0">
-                {/* HOME */}
-                <a
-                  className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2"
-                  href="#hero-target"
-                >
-                  მთავარი
-                </a>
-              </li>
+            <button
+              id="hamburger-btn"
+              aria-controls="responsive-navbar-nav"
+              className="navbar-toggler collapsed p-1 my-2"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#responsive-navbar-nav"
+              data-bs-auto-close="true"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div
+              className="navbar-collapse collapse w-100"
+              id="responsive-navbar-nav"
+            >
+              <ul className="nav navbar-nav w-100 justify-content-end">
+                <li className="nav-item mb-md-0">
+                  {/* HOME */}
+                  <a
+                    className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2"
+                    href="#hero-target"
+                  >
+                    მთავარი
+                  </a>
+                </li>
 
-              <li className="nav-item mb-md-0">
-                {/* Student */}
-                <a
-                  className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2"
-                  href="#student-target"
-                >
-                  სტუდენტი
-                </a>
-              </li>
+                <li className="nav-item mb-md-0">
+                  {/* Student */}
+                  <a
+                    className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2"
+                    href="#student-target"
+                  >
+                    სტუდენტი
+                  </a>
+                </li>
 
-              <li className="nav-item mb-md-0">
-                {/* Tutor */}
-                <a
-                  className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2"
-                  href="#tutor-target"
-                >
-                  მასწავლებელი
-                </a>
-              </li>
+                <li className="nav-item mb-md-0">
+                  {/* Tutor */}
+                  <a
+                    className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2"
+                    href="#tutor-target"
+                  >
+                    მასწავლებელი
+                  </a>
+                </li>
 
-              <li className="nav-item mb-md-0">
-                {/* Our Mission */}
-                <a
-                  className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2 text-nowrap"
-                  href="#mission-target"
-                >
-                  მისია
-                </a>
-              </li>
+                <li className="nav-item mb-md-0">
+                  {/* Our Mission */}
+                  <a
+                    className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2 text-nowrap"
+                    href="#mission-target"
+                  >
+                    მისია
+                  </a>
+                </li>
 
-              <li className="nav-item mb-md-0">
-                {/* About Us */}
-                <a
-                  className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2 text-nowrap"
-                  href="#about-target"
-                >
-                  რატომ ჩვენ?
-                </a>
-              </li>
+                <li className="nav-item mb-md-0">
+                  {/* About Us */}
+                  <a
+                    className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2 text-nowrap"
+                    href="#about-target"
+                  >
+                    რატომ ჩვენ?
+                  </a>
+                </li>
 
-              <li className="nav-item mb-md-0">
-                {/* Testimonials */}
-                <a
-                  className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2 text-nowrap"
-                  href="#testimonials-target"
-                >
-                  შეფასება
-                </a>
-              </li>
+                <li className="nav-item mb-md-0">
+                  {/* Testimonials */}
+                  <a
+                    className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2 text-nowrap"
+                    href="#testimonials-target"
+                  >
+                    შეფასება
+                  </a>
+                </li>
 
-              <li className="nav-item mb-md-0">
-                {/* Contact Us */}
-                <a
-                  className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2 fs-xl-1 text-nowrap"
-                  href="#contact-target"
-                >
-                  პარტნიორები
-                </a>
-              </li>
-            </ul>
+                <li className="nav-item mb-md-0">
+                  {/* Contact Us */}
+                  <a
+                    className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2 fs-xl-1 text-nowrap"
+                    href="#contact-target"
+                  >
+                    პარტნიორები
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </div>
+        </nav>
+      </header>
     </>
   );
 };

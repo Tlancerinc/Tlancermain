@@ -27,7 +27,7 @@ const ContactUs = () => {
                 <a
                   target={"_blank"}
                   rel={"noreferrer"}
-                  href="https://www.tbcbank.ge/web/ka"
+                  href="https://ge.linkedin.com/company/tecklinkllc"
                 >
                   <img
                     className="img-fluid tl-logo my-3"
