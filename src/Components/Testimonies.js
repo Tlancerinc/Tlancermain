@@ -8,7 +8,7 @@ const Testimonies = () => {
     }
 
     #card1 {
-      box-shadow: 0px 0px 30px 15px rgba(253, 78, 93,0.3);
+      box-shadow: 0px 0px 30px 5px rgba(253, 78, 93,0.2);
       transition: .4s all ease-in-out;
     }
     #card1:hover {
@@ -17,7 +17,7 @@ const Testimonies = () => {
     }
 
     #card2 {
-      box-shadow: 0px 0px 30px 15px rgba(14, 205, 136, 0.3);
+      box-shadow: 0px 0px 30px 5px rgba(14, 205, 136, 0.2);
       transition: .4s all ease-in-out;
     }
     #card2:hover {
@@ -26,7 +26,7 @@ const Testimonies = () => {
     }
 
     #card3 {
-      box-shadow: 0px 0px 30px 15px rgba(49, 126, 246, 0.3);
+      box-shadow: 0px 0px 30px 5px rgba(49, 126, 246, 0.2);
       transition: .4s all ease-in-out;
     }
     #card3:hover {
@@ -35,7 +35,7 @@ const Testimonies = () => {
     }
 
     #card4 {
-      box-shadow: 0px 0px 30px 15px rgba(255, 215, 0, 0.3);
+      box-shadow: 0px 0px 30px 5px rgba(255, 215, 0, 0.2);
       transition: .4s all ease-in-out;
     }
     #card4:hover {
