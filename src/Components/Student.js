@@ -11,7 +11,6 @@ const Student = (props) => {
   };
 
   function studentHandler() {
-    document.getElementById("student-signup-btn").style.display = "none";
     setToggleState(1);
   }
 
@@ -147,6 +146,21 @@ const Student = (props) => {
               margin: 0 0.5rem;
             }
             
+            .fade-in {
+              animation: fade-in .35s ease-out forwards;              
+            }
+
+            @keyframes fade-in {
+              0% {
+                opacity: 0;
+              }
+              50% {
+                opacity: .3;
+              }
+              100% {
+                opacity: 1;
+              }
+            }
 
             .active-tabs  {
               background: var(--main-green);
@@ -252,18 +266,22 @@ const Student = (props) => {
               <button
                 onClick={studentHandler}
                 id="student-signup-btn"
-                className="mt-5 px-4 btn btn-lg text-nowrap"
+                className={
+                  toggleState === 0
+                    ? "mt-5 px-4 btn btn-lg text-nowrap"
+                    : "mt-5 px-4 btn btn-lg text-nowrap bloc-tabs-hide"
+                }
                 aria-label="Toggle tutor sign-up form"
               >
                 {/* Sign Up Today */}
                 რეგისტრაცია
               </button>
-              <div className="forms-container col col-lg-7 d-flex flex-column align-items-center">
+              <div className="col col-lg-7 d-flex flex-column align-items-center">
                 <div
                   className={
                     toggleState === 0
                       ? "bloc-tabs-hide"
-                      : "bloc-tabs mt-5 w-100"
+                      : "bloc-tabs mt-5 w-100 fade-in"
                   }
                 >
                   <button
@@ -297,7 +315,7 @@ const Student = (props) => {
                     id="student-form"
                     className={
                       toggleState === 1
-                        ? "flex-column content active-content"
+                        ? "flex-column content active-content fade-in"
                         : "flex-column content"
                     }
                     onSubmit={formHandler}
@@ -362,7 +380,7 @@ const Student = (props) => {
                     id="parent-form"
                     className={
                       toggleState === 2
-                        ? "flex-column ms-auto content active-content"
+                        ? "flex-column ms-auto content active-content fade-in"
                         : "flex-column content"
                     }
                     onSubmit={parentFormHandler}

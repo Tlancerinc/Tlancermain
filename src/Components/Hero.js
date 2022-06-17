@@ -1,5 +1,5 @@
 import heroImg from "../images/hero-img.png";
-import vector from "../images/smallVector.svg";
+import vector from "../images/GiantGreen.svg";
 const Hero = () => {
   return (
     <>
@@ -9,32 +9,49 @@ const Hero = () => {
             top: 0;
         }
      
-      #hero-container-deco stop {
-        color: black
-      }
-
-      @media (min-width: 768px) {
         #hero-container-deco {
-          background: white!important;
+          position: absolute;
+          width: 90rem;
+          top: -45rem;
+          left: -80rem;
+          opacity: .15;
+          animation: spin linear 43s infinite;
         }
-      }
+
+        @keyframes spin {
+          0% {
+            transform: rotate(0);            
+          }
+          
+          100% {
+            transform: rotate(360deg);            
+          }
+        }
+
+        @media (min-width: 768px) {
+          #hero-container-deco {
+            display: none;
+          }
+        }
+
+        @media (min-width: 768px) {
+          #hero-container-deco {
+            display: none;
+          }
+        }
         
         
       `}</style>
       <section id="hero">
         <div id="hero-target" className="link-target mb-5"></div>
-        <div
-          id="hero-container-deco"
-          style={{
-            background: `url(${vector})`,
-            backgroundSize: "80vw",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "50% 20%",
-          }}
-          className="container-fluid d-flex flex-column flex-md-row align-items-start text-center text-md-start pt-5 px-2 mx-0 mt-5"
-        >
-          <div className="col-lg-1"></div>
+        <div className="container-fluid d-flex flex-column flex-md-row align-items-start text-center text-md-start pt-4 px-2 mx-0 mt-5">
+          <div className="col-md-1"></div>
           <div className="col-md-6 col-lg-5 px-lg-0 mb-0 py-5 my-xl-5 text-xl-start">
+            <img
+              id="hero-container-deco"
+              src={vector}
+              alt="green decorative blob"
+            />
             <h1 className="display-5 display-md-1 fw-bold lh-base">
               {/* Learn from <br /> certified and experienced tutors */}
               ისწავლე გამოცდილი მასწავლებლებისგან
