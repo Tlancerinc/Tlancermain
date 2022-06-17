@@ -152,7 +152,6 @@ const Student = (props) => {
               background: var(--main-green);
               color: rgba(0, 0, 0, 0.74);
               font-weight: bold;
-              font-style: italic;
               box-shadow: none;
               border: 3px solid rgba(0, 0, 0, 0.274);
             }

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import NavbarMain from "./Navbar";
 import Hero from "./Hero";
 import Student from "./Student";
@@ -10,6 +10,13 @@ import ContactUs from "./Contact";
 import Footer from "./Footer";
 
 const Home = () => {
+  const [language, setLanguage] = useState(1);
+
+  const toggleLanguageHandler = (num) => {
+    console.log("beforlanguage: " + language);
+    setLanguage(num);
+    console.log("afterlanguage: " + language);
+  };
   console.log("home screen rendered");
   // const studentFormRef = useRef();
   // const heroRef = useRef();
@@ -38,7 +45,7 @@ const Home = () => {
 
   return (
     <>
-      <NavbarMain />
+      <NavbarMain lang={language} setLang={toggleLanguageHandler} />
 
       <Hero />
       <Student />
