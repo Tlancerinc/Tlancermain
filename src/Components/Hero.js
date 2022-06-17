@@ -13,7 +13,7 @@ const Hero = () => {
           position: absolute;
           top: -90%;
           right: 40%;
-          width: 90rem;
+          width: 80rem;
           opacity: .15;
           animation: spin linear 43s infinite;
           overflow: hidden;          
