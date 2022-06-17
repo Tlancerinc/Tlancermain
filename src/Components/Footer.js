@@ -51,6 +51,7 @@ const Footer = () => {
                         target={"_blank"}
                         rel={"noreferrer"}
                         className="foot-link"
+                        aria-label="LinkedIn"
                         href="https://www.linkedin.com/company/tlancer/"
                       >
                         <i className="fa-brands fa-linkedin h2"></i>
@@ -61,6 +62,7 @@ const Footer = () => {
                         target={"_blank"}
                         rel={"noreferrer"}
                         className="foot-link"
+                        aria-label="facebook"
                         href="https://www.facebook.com/tlancer.ge"
                       >
                         <i className="fa-brands fa-facebook h2"></i>
@@ -71,6 +73,7 @@ const Footer = () => {
                         target={"_blank"}
                         rel={"noreferrer"}
                         className="foot-link"
+                        aria-label="GitHub"
                         href="https://github.com/Tlancerinc"
                       >
                         <i className="fa-brands fa-github h2"></i>

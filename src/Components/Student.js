@@ -5,10 +5,14 @@ import studentImg from "../images/student-img.png";
 const Student = (props) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [toggleState, setToggleState] = useState(0);
+  const toggleTab = (index) => {
+    setToggleState(index);
+  };
 
   function studentHandler() {
     document.getElementById("student-signup-btn").style.display = "none";
-    document.getElementById("student-form").style.display = "flex";
+    setToggleState(1);
   }
 
   function disableStudentForm() {
@@ -38,12 +42,58 @@ const Student = (props) => {
         role: "Student",
       }),
     };
+
     try {
       setModalIsOpen(true);
       setIsLoading(true);
       const formResponse = await fetch(
         "https://formsubmit.co/ajax/tlancerinc@gmail.com",
         requestSettings
+      );
+      if (!formResponse.ok) {
+        throw new Error("Error during form submission");
+      } else {
+        const data = await formResponse.json();
+        setIsLoading(false);
+        console.log("***fetch ran " + data);
+      }
+    } catch (e) {
+      console.log("response error: " + e);
+    }
+  };
+
+  const parentFormHandler = async (e) => {
+    e.preventDefault();
+    const parentFirstName = document.getElementById("first-name-parent");
+    const parentSurName = document.getElementById("last-name-parent");
+    const childFirstName = document.getElementById("child-first-name");
+    const childSurName = document.getElementById("child-surname");
+    const parentEmail = document.getElementById("email-parent");
+    const parentPhone = document.getElementById("phone-parent");
+
+    const parentRequestSettings = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        parentName: `${parentFirstName.value}`,
+        parentSurname: `${parentSurName.value}`,
+        childName: `${childFirstName.value}`,
+        childSurName: `${childSurName.value}`,
+        parentEmail: `${parentEmail.value}`,
+        parentPhone: `${parentPhone.value}`,
+        role: "Parent",
+      }),
+    };
+    //
+    try {
+      setModalIsOpen(true);
+      setIsLoading(true);
+      const formResponse = await fetch(
+        "https://formsubmit.co/ajax/tlancerinc@gmail.com",
+        parentRequestSettings
       );
       if (!formResponse.ok) {
         throw new Error("Error during form submission");
@@ -65,15 +115,64 @@ const Student = (props) => {
               bottom: -4rem;
             }
             
-            #student-form {
-              position: relative;                     
-              display: none;
+            #student-form, #parent-form {
+              position: relative;  
             }
+
             #student-signup-btn {
                 letter-spacing: .8px;
                 border: none;
                 outline: none;
             }
+
+            .bloc-tabs { 
+              display: flex;              
+            }
+
+            .bloc-tabs-hide { 
+              display: none;
+            }
+
+            .tabs {
+              padding: 8px 15px;
+              text-align: center;
+              width: 50%;
+              background: white;
+              cursor: pointer;
+              border: 1px solid rgba(0, 0, 0, 0.274);              
+              position: relative;
+              outline: none;
+              color: rgba(0, 0, 0, 0.474);
+              border-radius: 30px;
+              margin: 0 0.5rem;
+            }
+            
+
+            .active-tabs  {
+              background: var(--main-green);
+              color: rgba(0, 0, 0, 0.74);
+              font-weight: bold;
+              font-style: italic;
+              box-shadow: none;
+              border: 3px solid rgba(0, 0, 0, 0.274);
+            }
+
+
+            .content-tabs {
+              flex-grow : 1;
+            }
+            .content {
+              background: white;
+              padding: 20px 0;
+              width: 100%;
+              height: 100%;
+              display: none;
+            }
+
+            .active-content {
+              display: flex;
+            }
+
             `}</style>
 
       <Modal
@@ -160,65 +259,191 @@ const Student = (props) => {
                 {/* Sign Up Today */}
                 რეგისტრაცია
               </button>
-              <form
-                id="student-form"
-                className="flex-column w-50"
-                onSubmit={formHandler}
-                encType="text/plain"
-              >
-                {/* Honeypot */}
-                <input type="text" name="_honey" style={{ display: "none" }} />
-
-                <input
-                  id="first-name-student"
-                  className="my-3 fs-4 p-1 ps-2 rounded s-input"
-                  type="text"
-                  placeholder="სახელი"
-                  name="name"
-                  required
-                />
-                <input
-                  id="last-name-student"
-                  className="my-3 fs-4 p-1 ps-2 rounded s-input"
-                  type="text"
-                  placeholder="გვარი"
-                  name="surname"
-                  required
-                />
-                <input
-                  id="email-student"
-                  className="my-3 fs-4 p-1 ps-2 rounded s-input"
-                  type={"email"}
-                  placeholder="ელ-ფოსტა"
-                  name="email"
-                  required
-                />
-                <input
-                  id="phone-student"
-                  className="my-3 fs-4 p-1 ps-2 rounded s-input"
-                  type={"phone"}
-                  placeholder="მობილური"
-                  name="phone"
-                  required
-                />
-
-                <button
-                  type="submit"
-                  className="tutor-btn mt-3 px-2 btn btn-lg text-nowrap w-100 s-input"
+              <div className="forms-container col col-lg-7 d-flex flex-column align-items-center">
+                <div
+                  className={
+                    toggleState === 0
+                      ? "bloc-tabs-hide"
+                      : "bloc-tabs mt-5 w-100"
+                  }
                 >
-                  გაგზავნა
-                </button>
-                {/* <button type="reset" className="tutor-btn mt-3 px-2 btn btn-lg">
+                  <button
+                    className={
+                      toggleState === 1
+                        ? "tabs active-tabs s-input"
+                        : "tabs s-input"
+                    }
+                    onClick={() => {
+                      toggleTab(1);
+                    }}
+                  >
+                    სტუდენტი
+                  </button>
+                  <button
+                    className={
+                      toggleState === 2
+                        ? "tabs active-tabs s-input"
+                        : "tabs s-input"
+                    }
+                    onClick={() => {
+                      toggleTab(2);
+                    }}
+                  >
+                    მშობელი
+                  </button>
+                </div>
+                <div className="content-tabs w-100">
+                  {/* Student Form */}
+                  <form
+                    id="student-form"
+                    className={
+                      toggleState === 1
+                        ? "flex-column content active-content"
+                        : "flex-column content"
+                    }
+                    onSubmit={formHandler}
+                    encType="text/plain"
+                  >
+                    {/* Honeypot */}
+                    <input
+                      type="text"
+                      name="_honey"
+                      style={{ display: "none" }}
+                    />
+
+                    <input
+                      id="first-name-student"
+                      className="my-3 fs-4 p-1 ps-2 rounded s-input"
+                      type="text"
+                      placeholder="სახელი"
+                      name="name"
+                      required
+                    />
+                    <input
+                      id="last-name-student"
+                      className="my-3 fs-4 p-1 ps-2 rounded s-input"
+                      type="text"
+                      placeholder="გვარი"
+                      name="surname"
+                      required
+                    />
+                    <input
+                      id="email-student"
+                      className="my-3 fs-4 p-1 ps-2 rounded s-input"
+                      type={"email"}
+                      placeholder="ელ-ფოსტა"
+                      name="email"
+                      required
+                    />
+                    <input
+                      id="phone-student"
+                      className="my-3 fs-4 p-1 ps-2 rounded s-input"
+                      type={"phone"}
+                      placeholder="მობილური"
+                      name="phone"
+                      required
+                    />
+
+                    <button
+                      type="submit"
+                      className="tutor-btn mt-3 px-2 btn btn-lg text-nowrap w-100 s-input"
+                    >
+                      გაგზავნა
+                    </button>
+                    {/* <button
+                    type="reset"
+                    className="tutor-btn mt-3 px-2 btn btn-lg"
+                  >
+                    Reset
+                  </button> */}
+                  </form>
+
+                  {/* Parent Form */}
+                  <form
+                    id="parent-form"
+                    className={
+                      toggleState === 2
+                        ? "flex-column ms-auto content active-content"
+                        : "flex-column content"
+                    }
+                    onSubmit={parentFormHandler}
+                    encType="text/plain"
+                  >
+                    {/* Honeypot */}
+                    <input
+                      type="text"
+                      name="_honey"
+                      style={{ display: "none" }}
+                    />
+
+                    <input
+                      id="first-name-parent"
+                      className="my-3 fs-4 p-1 ps-2 rounded s-input"
+                      type="text"
+                      placeholder="მშობლის სახელი"
+                      name="name"
+                      required
+                    />
+                    <input
+                      id="last-name-parent"
+                      className="my-3 fs-4 p-1 ps-2 rounded s-input"
+                      type="text"
+                      placeholder="მშობლის გვარი"
+                      name="surname"
+                      required
+                    />
+                    <input
+                      id="child-first-name"
+                      className="my-3 fs-4 p-1 ps-2 rounded s-input"
+                      type="text"
+                      placeholder="ბავშვის სახელი"
+                      name="child-first-name"
+                      required
+                    />
+                    <input
+                      id="child-surname"
+                      className="my-3 fs-4 p-1 ps-2 rounded s-input"
+                      type="text"
+                      placeholder="ბავშვის გვარი"
+                      name="child-surname"
+                      required
+                    />
+                    <input
+                      id="email-parent"
+                      className="my-3 fs-4 p-1 ps-2 rounded s-input"
+                      type={"email"}
+                      placeholder="მშობლის ელ-ფოსტა"
+                      name="parent-email"
+                      required
+                    />
+                    <input
+                      id="phone-parent"
+                      className="my-3 fs-4 p-1 ps-2 rounded s-input"
+                      type={"phone"}
+                      placeholder="მობილური"
+                      name="parent-phone"
+                      required
+                    />
+
+                    <button
+                      type="submit"
+                      className="tutor-btn mt-3 px-2 btn btn-lg text-nowrap w-100 s-input"
+                    >
+                      გაგზავნა
+                    </button>
+                    {/* <button type="reset" className="tutor-btn mt-3 px-2 btn btn-lg">
                   Reset
                 </button> */}
-              </form>
+                  </form>
+                </div>
+              </div>
             </div>
             <div className="col-lg-6 text-start mt-0">
               <img
                 className="img-fluid small-img"
                 alt="woman holding folders holding pencil"
-                width="1090"
-                height="1096"
+                width="958"
+                height="1104"
                 src={studentImg}
               />
             </div>

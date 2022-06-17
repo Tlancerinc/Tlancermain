@@ -21,7 +21,6 @@ html, body {
 .btn {
   background: var(--main-green)!important;
   color: #fff!important;  
-  /* width: 250px!important;   */
 }
 .body-text {
   line-height: 2.0 !important;
@@ -44,8 +43,7 @@ form {
 }
 
 form input {
-  border: 2px solid var(--main-green);
-  font-style: italic;  
+  border: 2px solid var(--main-green);  
   font-weight: bold; 
   transition: .2s all ease-in;           
 }
@@ -53,7 +51,7 @@ form input {
 form input:focus {
   transform: scale(1.05);
   outline: none;
-  box-shadow: 0px 0px 18px rgba(14, 205, 136, .7);  
+  box-shadow: 0px 0px 18px rgba(14, 205, 136, .4);  
 }
 
 ::placeholder {
@@ -68,13 +66,10 @@ input[disabled] {
 }
 
 @media (max-width: 725px){
-  .btn {
-    background: var(--main-green)!important;
-    color: #fff!important; 
-  }
-  #tutor-form, #student-form {
+  
+  /* #tutor-form, #student-form, #parent-form {
     width: 100%!important;
-  }
+  } */
 }
 
 

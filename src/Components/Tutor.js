@@ -196,12 +196,12 @@ const Tutor = (props) => {
                 </button> */}
               </form>
             </div>
-            <div className="col-lg-6 text-start mt-5 mt-lg-0 order-1 order-lg-2">
+            <div className="col-lg-6 text-start mt-0 order-1 order-lg-2">
               <img
                 className="img-fluid small-img"
                 alt="woman holding folders"
-                width="1099"
-                height="1103"
+                width="1081"
+                height="1104"
                 src={tutorImg}
               />
             </div>

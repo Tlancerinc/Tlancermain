@@ -64,8 +64,8 @@ const Hero = () => {
               className="img-fluid me-0"
               src={heroImg}
               alt="man pointing upwards"
-              width="684"
-              height="1027"
+              width="875"
+              height="1046"
             />
           </div>
         </div>

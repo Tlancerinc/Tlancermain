@@ -20,8 +20,8 @@ const Mission = () => {
               className="img-fluid"
               src={missionImage}
               alt="man with red folder"
-              width="862"
-              height="777"
+              width="893"
+              height="703"
             />
           </div>
           <div className="col col-lg-6 text-center text-lg-start m-auto px-0 px-lg-5">
