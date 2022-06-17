@@ -62,7 +62,7 @@ const Hero = () => {
               ჩვენთან ერთად
             </p>
             {/* Get Started */}
-            <a href="#hero-btn-target" className="btn px-5 btn-lg">
+            <a href="#hero-btn-target" className="btn px-5 btn-lg text-white">
               დაიწყე
             </a>
           </div>
