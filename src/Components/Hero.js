@@ -16,11 +16,12 @@ const Hero = () => {
           left: -80rem;
           opacity: .15;
           animation: spin linear 43s infinite;
+          overflow: hidden;
         }
 
         @keyframes spin {
           0% {
-            transform: rotate(0);            
+            transform: rotate(0deg);            
           }
           
           100% {

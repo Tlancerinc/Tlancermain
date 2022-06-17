@@ -67,9 +67,9 @@ input[disabled] {
 
 @media (max-width: 725px){
   
-  /* #tutor-form, #student-form, #parent-form {
+  #tutor-form, #student-form, #parent-form {
     width: 100%!important;
-  } */
+  }
 }
 
 

@@ -138,7 +138,7 @@ const Tutor = (props) => {
               </button>
               <form
                 id="tutor-form"
-                className="flex-column"
+                className="flex-column w-50"
                 onSubmit={tutorFormHandler}
                 encType="text/plain"
               >

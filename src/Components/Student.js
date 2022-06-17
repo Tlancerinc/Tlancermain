@@ -171,9 +171,10 @@ const Student = (props) => {
             }
 
 
-            .content-tabs {
+            {/* .content-tabs {
               flex-grow : 1;
-            }
+            } */}
+            
             .content {
               background: white;
               padding: 20px 0;
@@ -315,7 +316,7 @@ const Student = (props) => {
                     id="student-form"
                     className={
                       toggleState === 1
-                        ? "flex-column content active-content fade-in"
+                        ? "flex-column content w-50 active-content fade-in"
                         : "flex-column content"
                     }
                     onSubmit={formHandler}
@@ -380,7 +381,7 @@ const Student = (props) => {
                     id="parent-form"
                     className={
                       toggleState === 2
-                        ? "flex-column ms-auto content active-content fade-in"
+                        ? "flex-column ms-auto w-50 content active-content fade-in"
                         : "flex-column content"
                     }
                     onSubmit={parentFormHandler}
