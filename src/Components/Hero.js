@@ -11,12 +11,12 @@ const Hero = () => {
      
         #hero-container-deco {
           position: absolute;
+          top: -90%;
+          right: 40%;
           width: 90rem;
-          top: -45rem;
-          left: -80rem;
           opacity: .15;
           animation: spin linear 43s infinite;
-          overflow: hidden;
+          overflow: hidden;          
         }
 
         @keyframes spin {
@@ -53,11 +53,11 @@ const Hero = () => {
               src={vector}
               alt="green decorative blob"
             />
-            <h1 className="display-5 display-md-1 fw-bold lh-base">
+            <h1 className="display-6 display-md-1 fw-bold lh-base">
               {/* Learn from <br /> certified and experienced tutors */}
               ისწავლე გამოცდილი მასწავლებლებისგან
             </h1>
-            <p className="h4 fw-normal my-5 pb-2">
+            <p className="h5 fw-normal my-5 pb-2">
               დაუკავშირდი მასწავლებლებს და ციფრულად მართე სწავლის პროცესი
               ჩვენთან ერთად
             </p>

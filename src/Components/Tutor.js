@@ -5,10 +5,10 @@ import tutorImg from "../images/instructor.png";
 const Tutor = (props) => {
   const [tModalIsOpen, setTModalIsOpen] = useState(false);
   const [tutorIsLoading, setTutorIsLoading] = useState(false);
+  const [formToggle, setFormToggle] = useState(0);
 
   function tutorHandler() {
-    document.getElementById("tutor-signup-btn").style.display = "none";
-    document.getElementById("tutor-form").style.display = "flex";
+    setFormToggle(1);
   }
 
   function disableTutorForm() {
@@ -63,8 +63,7 @@ const Tutor = (props) => {
       <style type="text/css">{`
              
             #tutor-form {
-              position: relative;                     
-              display: none;
+              position: relative;
               transition: .3s;
             }
             #tutor-signup-btn {
@@ -73,6 +72,9 @@ const Tutor = (props) => {
                 outline: none;
             }
            
+            .bloc-tabs-hide { 
+              display: none;
+            }
           
             .tutor-btn {
                 background: var(--main-green);
@@ -130,71 +132,81 @@ const Tutor = (props) => {
               <button
                 onClick={tutorHandler}
                 id="tutor-signup-btn"
-                className="mt-5 px-4 btn btn-lg text-nowrap"
+                className={
+                  formToggle === 0
+                    ? "mt-5 px-4 btn btn-lg text-nowrap"
+                    : "mt-5 px-4 btn btn-lg text-nowrap bloc-tabs-hide"
+                }
                 aria-label="Toggle tutor sign-up form"
               >
                 რეგისტრაცია
                 {/* Sign Up Today */}
               </button>
-              <form
-                id="tutor-form"
-                className="flex-column w-50"
-                onSubmit={tutorFormHandler}
-                encType="text/plain"
-              >
-                <input
-                  id="first-name-tutor"
-                  className="my-3 fs-4 p-1 ps-2 rounded t-input"
-                  type={"text"}
-                  placeholder="სახელი"
-                  name="first-name"
-                  required
-                />
-                <input
-                  id="last-name-tutor"
-                  className="my-3 fs-4 p-1 ps-2 rounded t-input"
-                  type={"text"}
-                  placeholder="გვარი"
-                  name="sur-name"
-                  required
-                />
-                <input
-                  id="email-tutor"
-                  className="my-3 fs-4 p-1 ps-2 rounded t-input"
-                  type={"email"}
-                  placeholder="ელ-ფოსტა"
-                  name="e-mail"
-                  required
-                />
-                <input
-                  id="phone-tutor"
-                  className="my-3 fs-4 p-1 ps-2 rounded t-input"
-                  type={"phone"}
-                  placeholder="მობილური"
-                  name="phone-number"
-                  required
-                />
-                <input
-                  id="subject-tutor"
-                  className="my-3 fs-4 p-1 ps-2 rounded t-input"
-                  type={"text"}
-                  placeholder="საგანი"
-                  name="subject-tutor"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="tutor-btn mt-3 px-2 btn btn-lg text-nowrap w-100 t-input"
+              <div className="w-100">
+                <form
+                  id="tutor-form"
+                  className={
+                    formToggle > 0
+                      ? "d-flex flex-column w-50"
+                      : "bloc-tabs-hide"
+                  }
+                  onSubmit={tutorFormHandler}
+                  encType="text/plain"
                 >
-                  გაგზავნა
-                </button>
-                {/* <button
+                  <input
+                    id="first-name-tutor"
+                    className="my-3 fs-4 p-1 ps-2 rounded t-input"
+                    type={"text"}
+                    placeholder="სახელი"
+                    name="first-name"
+                    required
+                  />
+                  <input
+                    id="last-name-tutor"
+                    className="my-3 fs-4 p-1 ps-2 rounded t-input"
+                    type={"text"}
+                    placeholder="გვარი"
+                    name="sur-name"
+                    required
+                  />
+                  <input
+                    id="email-tutor"
+                    className="my-3 fs-4 p-1 ps-2 rounded t-input"
+                    type={"email"}
+                    placeholder="ელ-ფოსტა"
+                    name="e-mail"
+                    required
+                  />
+                  <input
+                    id="phone-tutor"
+                    className="my-3 fs-4 p-1 ps-2 rounded t-input"
+                    type={"phone"}
+                    placeholder="მობილური"
+                    name="phone-number"
+                    required
+                  />
+                  <input
+                    id="subject-tutor"
+                    className="my-3 fs-4 p-1 ps-2 rounded t-input"
+                    type={"text"}
+                    placeholder="საგანი"
+                    name="subject-tutor"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    className="tutor-btn mt-3 px-2 btn btn-lg text-nowrap w-100 t-input"
+                  >
+                    გაგზავნა
+                  </button>
+                  {/* <button
                   type="reset"
                   className="tutor-btn mt-2 px-3 btn btn-primary"
                 >
                   Reset
                 </button> */}
-              </form>
+                </form>
+              </div>
             </div>
             <div className="col-lg-6 text-start mt-0 order-1 order-lg-2">
               <img
