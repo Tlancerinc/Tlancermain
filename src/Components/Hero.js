@@ -16,7 +16,8 @@ const Hero = () => {
           width: 80rem;
           opacity: .15;
           animation: spin linear 43s infinite;
-          overflow: hidden;          
+          overflow: hidden;  
+          z-index: 0;        
         }
 
         @keyframes spin {
@@ -48,11 +49,11 @@ const Hero = () => {
         <div className="container-fluid d-flex flex-column flex-md-row align-items-start text-center text-md-start pt-4 px-2 mx-0 mt-5">
           <div className="col-md-1"></div>
           <div className="col-md-6 col-lg-5 px-lg-0 mb-0 py-5 my-xl-5 text-xl-start">
-            <img
+            {/* <img
               id="hero-container-deco"
               src={vector}
               alt="green decorative blob"
-            />
+            /> */}
             <h1 className="display-6 display-md-1 fw-bold lh-base">
               {/* Learn from <br /> certified and experienced tutors */}
               ისწავლე გამოცდილი მასწავლებლებისგან
