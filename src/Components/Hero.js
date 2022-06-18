@@ -1,6 +1,7 @@
 import heroImg from "../images/hero-img.png";
 import vector from "../images/GiantGreen.svg";
 const Hero = () => {
+  console.log("hero rendered");
   return (
     <>
       <style>{`
@@ -8,30 +9,66 @@ const Hero = () => {
             left: 0;            
             top: 0;
         }
-     
-        #hero-container-deco {
-          position: absolute;
-          top: -90%;
-          right: 40%;
-          width: 80rem;
-          opacity: .15;
-          animation: spin linear 43s infinite;
-          overflow: hidden;  
-          z-index: 0;        
+
+        #hero {
+          overflowX: hidden;
         }
 
-        @keyframes spin {
+        #cta {
+          z-index: 100;
+        }
+     
+        .hero-container-deco {
+          position: absolute;
+          bottom: 6rem;
+          right: 10rem; 
+          z-index: -1;         
+          width: 40rem;          
+          opacity: .13;
+          animation: spin linear 40s infinite;
+          {/* transform-origin: -29rem 0; */}
+        }
+
+        .deco-2 {
+          width: 43rem;
+          bottom: 8rem;
+          right: 13rem;
+          z-index: -2;
+          opacity: .09;
+          animation: spin2 linear 53s infinite;
+        }
+
+        @keyframes spin2 {
           0% {
-            transform: rotate(0deg);            
-          }
-          
+            transform: rotate(0deg);                        
+          }          
           100% {
             transform: rotate(360deg);            
           }
         }
 
+        @keyframes spin {
+          0% {
+            transform: rotate(0deg);                        
+          }          
+          100% {
+            transform: rotate(360deg);            
+          }
+        }
+
+        @media (min-width: 515px) {
+          .hero-container-deco {
+            bottom: 6rem;
+            right: 22rem;
+          }
+          .deco-2 {
+            bottom: 8rem;
+            right: 15rem;
+          }
+        }
+
         @media (min-width: 768px) {
-          #hero-container-deco {
+          .hero-container-deco {
             display: none;
           }
         }
@@ -44,16 +81,24 @@ const Hero = () => {
         
         
       `}</style>
-      <section id="hero">
+      <section className="position-relative" id="hero">
         <div id="hero-target" className="link-target mb-5"></div>
-        <div className="container-fluid d-flex flex-column flex-md-row align-items-start text-center text-md-start pt-4 px-2 mx-0 mt-5">
+        <img
+          className="display-md-none hero-container-deco"
+          src={vector}
+          alt="green decorative blob"
+        />
+        <img
+          className="display-md-none hero-container-deco deco-2"
+          src={vector}
+          alt="green decorative blob"
+        />
+        <div
+          style={{ zIndex: "2" }}
+          className="container-fluid d-flex flex-column flex-md-row align-items-start text-center text-md-start pt-4 px-2 mx-0 mt-5"
+        >
           <div className="col-md-1"></div>
           <div className="col-md-6 col-lg-5 px-lg-0 mb-0 py-5 my-xl-5 text-xl-start">
-            {/* <img
-              id="hero-container-deco"
-              src={vector}
-              alt="green decorative blob"
-            /> */}
             <h1 className="display-6 display-md-1 fw-bold lh-base">
               {/* Learn from <br /> certified and experienced tutors */}
               ისწავლე გამოცდილი მასწავლებლებისგან
@@ -63,7 +108,11 @@ const Hero = () => {
               ჩვენთან ერთად
             </p>
             {/* Get Started */}
-            <a href="#hero-btn-target" className="btn px-5 btn-lg text-white">
+            <a
+              id="cta"
+              href="#hero-btn-target"
+              className="btn px-5 btn-lg text-white"
+            >
               დაიწყე
             </a>
           </div>

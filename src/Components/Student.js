@@ -109,6 +109,8 @@ const Student = (props) => {
   return (
     <>
       <style type="text/css">{`
+            
+                       
             #student-green-deco {
               left: 3rem;
               bottom: -4rem;
@@ -170,10 +172,6 @@ const Student = (props) => {
               border: 3px solid rgba(0, 0, 0, 0.274);
             }
 
-
-            {/* .content-tabs {
-              flex-grow : 1;
-            } */}
             
             .content {
               background: white;
