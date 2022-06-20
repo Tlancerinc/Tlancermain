@@ -91,9 +91,7 @@ const Tutor = (props) => {
                 filter: blur(2px);
                 transform: scale(1.3) translateY(50px);
               }
-              50% {
-                opacity: .8;                               
-              }
+              
               75% {
                 transform: translateY(0);
               }
