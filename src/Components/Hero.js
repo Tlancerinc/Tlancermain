@@ -23,9 +23,9 @@ const Hero = () => {
           bottom: 6rem;
           right: 10rem; 
           z-index: -2;         
-          width: 41rem;          
+          width: 40rem;          
           opacity: .13;
-          animation: spin linear 43s infinite;    
+          animation: spin linear 46s infinite;    
         }
 
         .deco-2 {
@@ -33,16 +33,16 @@ const Hero = () => {
           bottom: 8rem;
           right: 13rem;          
           z-index: -1;
-          opacity: .09;
+          opacity: .29;
           animation: spin2 linear 36s infinite;          
         }
 
         @keyframes spin2 {
           0% {
-            transform: rotate(0deg);                        
+            transform: rotate(180deg);                        
           }          
           100% {
-            transform: rotate(360deg);            
+            transform: rotate(540deg);            
           }
         }
 
