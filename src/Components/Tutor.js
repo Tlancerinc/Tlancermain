@@ -5,10 +5,10 @@ import tutorImg from "../images/instructor.png";
 const Tutor = (props) => {
   const [tModalIsOpen, setTModalIsOpen] = useState(false);
   const [tutorIsLoading, setTutorIsLoading] = useState(false);
-  const [formToggle, setFormToggle] = useState(0);
+  const [formToggle, setFormToggle] = useState(false);
 
   function tutorHandler() {
-    setFormToggle(1);
+    setFormToggle(true);
   }
 
   function disableTutorForm() {
@@ -71,9 +71,36 @@ const Tutor = (props) => {
                 border: none;
                 outline: none;
             }
+
+            .form-cont {
+              overflow: hidden;
+            }
            
             .bloc-tabs-hide { 
               display: none;
+            }
+
+            .fade-in {
+              animation: fade-in .5s ease-in-out forwards;              
+            }
+
+            @keyframes fade-in {
+              0% {
+                opacity: 0;
+                filter: blur(5px);
+                transform: translateY(10px);
+              }
+              50% {
+                opacity: .8;                
+              }
+              75% {
+                filter: blur(0px);
+              }
+              100% {
+                opacity: 1;
+                
+                transform: translateY(0);
+              }
             }
           
             .tutor-btn {
@@ -97,7 +124,7 @@ const Tutor = (props) => {
       <section id="tutor" className="px-0 p-md-5 bg-white">
         <div id="tutor-target" className="link-target"></div>
         <div className="container-fluid">
-          <div className="container d-flex flex-column flex-lg-row mx-auto text-center text-lg-start">
+          <div className="container d-flex flex-column flex-lg-row mx-auto text-center text-lg-start form-cont">
             <div className="col-lg-6 px-0 order-2 order-lg-1 ps-lg-3 my-auto">
               {/* Become a Tutor Today */}
               <h2 className={`fw-bold h1`}>
@@ -133,8 +160,8 @@ const Tutor = (props) => {
                 onClick={tutorHandler}
                 id="tutor-signup-btn"
                 className={
-                  formToggle === 0
-                    ? "mt-5 px-4 btn btn-lg text-nowrap"
+                  formToggle === false
+                    ? "mt-5 px-4 btn btn-lg text-nowrap fade-in"
                     : "mt-5 px-4 btn btn-lg text-nowrap bloc-tabs-hide"
                 }
                 aria-label="Toggle tutor sign-up form"
@@ -146,8 +173,8 @@ const Tutor = (props) => {
                 <form
                   id="tutor-form"
                   className={
-                    formToggle > 0
-                      ? "d-flex flex-column w-50"
+                    formToggle
+                      ? "d-flex flex-column w-50 fade-in"
                       : "bloc-tabs-hide"
                   }
                   onSubmit={tutorFormHandler}

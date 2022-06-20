@@ -1,4 +1,4 @@
-import heroImg from "../images/hero-img.png";
+import heroImg from "../images/hero-img.webp";
 import vector from "../images/GiantGreen.svg";
 const Hero = () => {
   console.log("hero rendered");
@@ -22,20 +22,19 @@ const Hero = () => {
           position: absolute;
           bottom: 6rem;
           right: 10rem; 
-          z-index: -1;         
-          width: 40rem;          
+          z-index: -2;         
+          width: 41rem;          
           opacity: .13;
-          animation: spin linear 40s infinite;
-          {/* transform-origin: -29rem 0; */}
+          animation: spin linear 43s infinite;    
         }
 
         .deco-2 {
           width: 43rem;
           bottom: 8rem;
-          right: 13rem;
-          z-index: -2;
+          right: 13rem;          
+          z-index: -1;
           opacity: .09;
-          animation: spin2 linear 53s infinite;
+          animation: spin2 linear 36s infinite;          
         }
 
         @keyframes spin2 {

@@ -148,21 +148,7 @@ const Student = (props) => {
               margin: 0 0.5rem;
             }
             
-            .fade-in {
-              animation: fade-in .35s ease-out forwards;              
-            }
-
-            @keyframes fade-in {
-              0% {
-                opacity: 0;
-              }
-              50% {
-                opacity: .3;
-              }
-              100% {
-                opacity: 1;
-              }
-            }
+           
 
             .active-tabs  {
               background: var(--main-green);
@@ -178,7 +164,7 @@ const Student = (props) => {
               padding: 20px 0;
               width: 100%;
               height: 100%;
-              display: none;
+              display: none;              
             }
 
             .active-content {
@@ -231,7 +217,7 @@ const Student = (props) => {
             </defs>
           </svg>
 
-          <div className="container d-flex flex-column-reverse flex-lg-row-reverse mx-auto text-center text-lg-start">
+          <div className="container d-flex flex-column-reverse flex-lg-row-reverse mx-auto text-center text-lg-start form-cont">
             <div className="col-lg-6 px-0 ps-lg-3 my-auto">
               {/* Register and join other students */}
               <h2 className={`fw-bold h1`}>დარეგისტრირდი როგორც სტუდენტი</h2>
@@ -314,7 +300,7 @@ const Student = (props) => {
                     id="student-form"
                     className={
                       toggleState === 1
-                        ? "flex-column content w-50 active-content fade-in"
+                        ? "flex-column content active-content fade-in"
                         : "flex-column content"
                     }
                     onSubmit={formHandler}
@@ -379,7 +365,7 @@ const Student = (props) => {
                     id="parent-form"
                     className={
                       toggleState === 2
-                        ? "flex-column ms-auto w-50 content active-content fade-in"
+                        ? "flex-column ms-auto content active-content fade-in"
                         : "flex-column content"
                     }
                     onSubmit={parentFormHandler}
