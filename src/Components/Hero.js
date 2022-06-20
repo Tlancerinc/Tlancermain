@@ -34,7 +34,7 @@ const Hero = () => {
           right: 13rem;          
           z-index: -1;
           opacity: .29;
-          animation: spin2 linear 36s infinite;          
+          animation: spin2 linear 46s infinite;          
         }
 
         @keyframes spin2 {
