@@ -67,9 +67,9 @@ const Tutor = (props) => {
               transition: .3s;
             }
             #tutor-signup-btn {
-                letter-spacing: .8px;
-                border: none;
-                outline: none;
+              letter-spacing: .8px;
+              border: none;
+              outline: none;
             }
 
             .form-cont {
@@ -81,25 +81,26 @@ const Tutor = (props) => {
             }
 
             .fade-in {
-              animation: fade-in .5s ease-in-out forwards;              
+              background: transparent;
+              animation: fade-in .65s ease-in-out forwards;              
             }
 
             @keyframes fade-in {
               0% {
                 opacity: 0;
-                filter: blur(5px);
-                transform: translateY(10px);
+                filter: blur(2px);
+                transform: scale(1.3) translateY(50px);
               }
               50% {
-                opacity: .8;                
+                opacity: .8;                               
               }
               75% {
-                filter: blur(0px);
+                transform: translateY(0);
               }
               100% {
                 opacity: 1;
-                
-                transform: translateY(0);
+                filter: blur(0px);
+                transform: scale(1);
               }
             }
           
