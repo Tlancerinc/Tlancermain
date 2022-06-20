@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.78269c95.css",
-    "main.js": "/static/js/main.861f86de.js",
+    "main.css": "/static/css/main.99062040.css",
+    "main.js": "/static/js/main.d5340275.js",
     "static/media/student-img.png": "/static/media/student-img.89b7cee0e36473e8ef6b.png",
     "static/media/instructor.png": "/static/media/instructor.87f581e5cfb404163b42.png",
     "static/media/blueSuitMan.png": "/static/media/blueSuitMan.edc754520adb53973132.png",
     "static/media/manHoldingRedFolder.png": "/static/media/manHoldingRedFolder.8e875cf5d8e4d1e6b802.png",
-    "static/media/hero-img.png": "/static/media/hero-img.ef2ee148968a85cf8e11.png",
+    "static/media/hero-img.webp": "/static/media/hero-img.fea689db77f7c7491924.webp",
     "static/media/techLink.webp": "/static/media/techLink.7f1c9a066b9be40414ce.webp",
     "static/media/bankOfGeorgia.webp": "/static/media/bankOfGeorgia.ca9a76d90ca54f6c9512.webp",
     "static/media/MicrosoftLogo.webp": "/static/media/MicrosoftLogo.a6e473be3a1b783076ba.webp",
     "static/media/tbcBank.webp": "/static/media/tbcBank.1382dce8f2734b364b94.webp",
     "index.html": "/index.html",
-    "static/media/smallVector.svg": "/static/media/smallVector.557040b35aceb7f0462163c194788355.svg",
-    "main.78269c95.css.map": "/static/css/main.78269c95.css.map",
-    "main.861f86de.js.map": "/static/js/main.861f86de.js.map"
+    "static/media/GiantGreen.svg": "/static/media/GiantGreen.b7db494c2c25ab2747d69489dfa5b037.svg",
+    "main.99062040.css.map": "/static/css/main.99062040.css.map",
+    "main.d5340275.js.map": "/static/js/main.d5340275.js.map"
   },
   "entrypoints": [
-    "static/css/main.78269c95.css",
-    "static/js/main.861f86de.js"
+    "static/css/main.99062040.css",
+    "static/js/main.d5340275.js"
   ]
 }
