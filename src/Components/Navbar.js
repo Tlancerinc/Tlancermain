@@ -11,6 +11,7 @@ const NavbarMain = () => {
       hamburgerBtn.ariaExpanded = false;
       console.log("linkHandler finished");
     };
+    document.body.addEventListener("click", menuLinkHandler);
 
     for (let i = 0; i < menuLinks.length; i++) {
       console.log("added event listener");
@@ -69,6 +70,8 @@ const NavbarMain = () => {
               outline: none;
               box-shadow: var(--main-green-hover)             
             }
+
+            
             
             {/* ######## END HAMBURGER MENU ######## */}
 

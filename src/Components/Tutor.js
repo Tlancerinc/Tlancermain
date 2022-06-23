@@ -82,23 +82,15 @@ const Tutor = (props) => {
 
             .fade-in {
               background: transparent;
-              animation: fade-in .65s ease-in-out forwards;              
+              animation: fade-in .35s ease-in-out forwards;              
             }
 
             @keyframes fade-in {
               0% {
                 opacity: 0;
-                filter: blur(2px);
-                transform: scale(1.3) translateY(50px);
-              }
-              
-              75% {
-                transform: translateY(0);
               }
               100% {
                 opacity: 1;
-                filter: blur(0px);
-                transform: scale(1);
               }
             }
           

@@ -10,11 +10,11 @@ import ContactUs from "./Contact";
 import Footer from "./Footer";
 
 const Home = () => {
-  const [language, setLanguage] = useState(1);
+  const [language, setLanguage] = useState(true);
 
-  const toggleLanguageHandler = (num) => {
+  const toggleLanguageHandler = () => {
     console.log("beforlanguage: " + language);
-    setLanguage(num);
+    setLanguage(!language);
     console.log("afterlanguage: " + language);
   };
   console.log("home screen rendered");
@@ -45,7 +45,7 @@ const Home = () => {
 
   return (
     <>
-      <NavbarMain lang={language} setLang={toggleLanguageHandler} />
+      <NavbarMain lang={language} setLang={() => toggleLanguageHandler()} />
 
       <Hero />
       <Student />
