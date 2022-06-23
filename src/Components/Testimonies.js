@@ -1,4 +1,5 @@
 const Testimonies = () => {
+  console.log("Testimonials rendered");
   return (
     <>
       <style>{`

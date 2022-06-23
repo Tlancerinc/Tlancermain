@@ -1,4 +1,5 @@
 const Footer = () => {
+  console.log("Footer rendered");
   const date = new Date();
   const year = date.getFullYear();
   return (

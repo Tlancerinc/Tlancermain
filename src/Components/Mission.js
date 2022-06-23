@@ -1,5 +1,6 @@
 import missionImage from "../images/manHoldingRedFolder.png";
 const Mission = () => {
+  console.log("Mission Rendered");
   return (
     <>
       <style>{`

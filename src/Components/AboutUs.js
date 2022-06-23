@@ -1,5 +1,6 @@
 import aboutImage from "../images/blueSuitMan.png";
 const About = () => {
+  console.log("About rendered");
   return (
     <>
       <style>{`

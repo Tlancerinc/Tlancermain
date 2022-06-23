@@ -3,6 +3,7 @@ import tecklink from "../images/techLink.webp";
 import tbc from "../images/tbcBank.webp";
 import bankOfGeorgia from "../images/bankOfGeorgia.webp";
 const ContactUs = () => {
+  console.log("Contact Us rendered");
   return (
     <>
       <style>{`

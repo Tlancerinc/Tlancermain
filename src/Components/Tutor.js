@@ -3,6 +3,7 @@ import Modal from "./Modal";
 import tutorImg from "../images/instructor.png";
 
 const Tutor = (props) => {
+  console.log("Tutor Rendered");
   const [tModalIsOpen, setTModalIsOpen] = useState(false);
   const [tutorIsLoading, setTutorIsLoading] = useState(false);
   const [formToggle, setFormToggle] = useState(false);
@@ -28,9 +29,9 @@ const Tutor = (props) => {
     const data = {
       lang: "en",
       type: "Tutor",
+      subject: `${subjectTutor.value}`,
       name: `${firstName.value} ${surName.value}`,
       email: `${email.value}`,
-      subject: `${subjectTutor.value}`,
       mobile: `${phone.value}`,
     };
     const requestSettings = {
@@ -44,7 +45,7 @@ const Tutor = (props) => {
       setTModalIsOpen(true);
       setTutorIsLoading(true);
       const formResponse = await fetch(
-        "https://formsubmit.co/ajax/tlancerinc@gmail.com",
+        "https://tlancer.herokuapp.com/api/registration/",
         requestSettings
       );
       if (!formResponse.ok) {

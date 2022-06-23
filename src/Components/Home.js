@@ -10,14 +10,14 @@ import ContactUs from "./Contact";
 import Footer from "./Footer";
 
 const Home = () => {
+  console.log("Home Component Rendered");
   const [language, setLanguage] = useState(true);
 
   const toggleLanguageHandler = () => {
-    console.log("beforlanguage: " + language);
     setLanguage(!language);
-    console.log("afterlanguage: " + language);
+    console.log("language toggled");
   };
-  console.log("home screen rendered");
+
   // const studentFormRef = useRef();
   // const heroRef = useRef();
   // const [studentFormRefIsVisible, setStudentFormRefIsVisible] = useState();

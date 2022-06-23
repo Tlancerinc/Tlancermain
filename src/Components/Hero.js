@@ -1,7 +1,7 @@
 import heroImg from "../images/hero-img.webp";
 import vector from "../images/GiantGreen.svg";
 const Hero = (props) => {
-  console.log("hero rendered");
+  console.log("Hero rendered");
   return (
     <>
       <style>{`

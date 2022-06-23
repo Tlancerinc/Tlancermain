@@ -56,7 +56,7 @@ const NavbarMain = (props) => {
              
              #language-label img {
               max-width: 2.5rem;
-              max-height: 1.5rem;              
+              max-height: 1.25rem;              
              }  
              .active-flag {
               opacity: 1;
@@ -78,7 +78,7 @@ const NavbarMain = (props) => {
              }
 
              #language-toggle {
-              margin: 0 .5rem;
+              margin: 0 .75rem;
               border: 2px solid var(--main-green);
               background: var(--main-green);
               padding: 0 1rem;

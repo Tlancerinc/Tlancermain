@@ -3,6 +3,7 @@ import Modal from "./Modal";
 import studentImg from "../images/student-img.png";
 
 const Student = (props) => {
+  console.log("Student Rendered");
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [toggleState, setToggleState] = useState(0);
@@ -73,13 +74,12 @@ const Student = (props) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        parentName: `${parentFirstName.value}`,
-        parentSurname: `${parentSurName.value}`,
-        childName: `${childFirstName.value}`,
-        childSurName: `${childSurName.value}`,
-        parentEmail: `${parentEmail.value}`,
-        parentPhone: `${parentPhone.value}`,
-        role: "Parent",
+        lang: "en",
+        type: "Parent",
+        name: `${parentFirstName.value} ${parentSurName.value}`,
+        child_name: `${childFirstName.value} ${childSurName.value}`,
+        email: `${parentEmail.value}`,
+        mobile: `${parentPhone.value}`,
       }),
     };
     //
