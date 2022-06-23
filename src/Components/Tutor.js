@@ -25,20 +25,20 @@ const Tutor = (props) => {
     const email = document.getElementById("email-tutor");
     const phone = document.getElementById("phone-tutor");
     const subjectTutor = document.getElementById("subject-tutor");
+    const data = {
+      lang: "en",
+      type: "Tutor",
+      name: `${firstName.value} ${surName.value}`,
+      email: `${email.value}`,
+      subject: `${subjectTutor.value}`,
+      mobile: `${phone.value}`,
+    };
     const requestSettings = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json",
       },
-      body: JSON.stringify({
-        name: `${firstName.value}`,
-        surname: `${surName.value}`,
-        email: `${email.value}`,
-        phone: `${phone.value}`,
-        subject: `${subjectTutor.value}`,
-        role: "Tutor",
-      }),
+      body: JSON.stringify(data),
     };
     try {
       setTModalIsOpen(true);
@@ -112,8 +112,8 @@ const Tutor = (props) => {
           disableTutorForm();
         }}
       />
-      <section id="tutor" className="px-0 p-md-5 bg-white">
-        <div id="tutor-target" className="link-target"></div>
+      <section id="tutor-section" className="px-0 p-md-5 bg-white">
+        <div id="tutor" className="link-target"></div>
         <div className="container-fluid">
           <div className="container d-flex flex-column flex-lg-row mx-auto text-center text-lg-start form-cont">
             <div className="col-lg-6 px-0 order-2 order-lg-1 ps-lg-3 my-auto">

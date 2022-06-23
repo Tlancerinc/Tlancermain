@@ -73,8 +73,11 @@ const Testimonies = () => {
     }
 
     `}</style>
-      <section id="testimonials" className="container-fluid bg-white p-md-5">
-        <div id="testimonials-target" className="link-target"></div>
+      <section
+        id="testimonials-section"
+        className="container-fluid bg-white p-md-5"
+      >
+        <div id="testimonials" className="link-target"></div>
         <div className="container p-md-5 bg-white">
           {/* ______ Heading Row */}
           <div className="row mb-5">

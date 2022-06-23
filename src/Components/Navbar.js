@@ -1,5 +1,7 @@
 import { useEffect } from "react";
-const NavbarMain = () => {
+import eng from "../images/uk.png";
+import ge from "../images/ge.png";
+const NavbarMain = (props) => {
   useEffect(() => {
     const menuLinks = document.querySelectorAll("nav .nav-link");
     const navBarNav = document.getElementById("responsive-navbar-nav");
@@ -11,7 +13,7 @@ const NavbarMain = () => {
       hamburgerBtn.ariaExpanded = false;
       console.log("linkHandler finished");
     };
-    document.body.addEventListener("click", menuLinkHandler);
+    // document.body.addEventListener("click", menuLinkHandler);
 
     for (let i = 0; i < menuLinks.length; i++) {
       console.log("added event listener");
@@ -38,7 +40,50 @@ const NavbarMain = () => {
               position: relative;
               bottom: 7rem;
             }
-                 
+
+            {/* ######## START LANGUAGE TOGGLER ########*/}
+
+             #language-label {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-left: 2rem;
+             }              
+             #language-label img {
+              max-width: 2.5rem;
+              max-height: 1.5rem;              
+             }  
+             .active-flag {
+              opacity: 1;
+              transform: scale(1.1);              
+              box-shadow: 0px 0px 10px var(--main-green-hover);
+             }
+             .inactive-flag {
+              opacity: .2;
+              transform: scale(.9);
+             }
+
+             @keyframes toggle-animation {
+              0%{
+                opacity: 0;
+              }
+              100% {
+                opacity: 1;
+              }
+             }
+
+             #language-toggle {
+              margin: 0 .5rem;
+              border: none;
+              background: var(--main-green);
+              padding: 0 1rem;
+              font-weight: bold;
+              border-radius: 8px;
+             }
+
+             {/* ######## END LANGUAGE TOGGLER ########*/}
+
+
 
             {/* ######## START LOGO ########*/}
             .logo {
@@ -140,14 +185,14 @@ const NavbarMain = () => {
            
             {/* ######## END MEDIA QUERIES ########*/}
 
-
+            
             
 
             `}
       </style>
       <header>
         <nav className="nav navbar navbar-custom fixed-top navbar-expand-md py-1">
-          <div className="container-fluid gx-0 align-items-lg-end px-2 pt-1 pb-0 px-md-4">
+          <div className="container-fluid gx-0 px-2 pt-1 pb-0 px-md-4">
             <a href="/" className="me-0 logo fw-bold fs-1 py-0">
               Tlancer
             </a>
@@ -173,9 +218,9 @@ const NavbarMain = () => {
                   {/* HOME */}
                   <a
                     className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2"
-                    href="#hero-target"
+                    href="#home"
                   >
-                    მთავარი
+                    {props.lang ? "მთავარი" : "Home"}
                   </a>
                 </li>
 
@@ -183,9 +228,9 @@ const NavbarMain = () => {
                   {/* Student */}
                   <a
                     className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2"
-                    href="#student-target"
+                    href="#student"
                   >
-                    სტუდენტი
+                    {props.lang ? "სტუდენტი" : "Student"}
                   </a>
                 </li>
 
@@ -193,9 +238,9 @@ const NavbarMain = () => {
                   {/* Tutor */}
                   <a
                     className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2"
-                    href="#tutor-target"
+                    href="#tutor"
                   >
-                    მასწავლებელი
+                    {props.lang ? "მასწავლებელი" : "Tutor"}
                   </a>
                 </li>
 
@@ -203,9 +248,9 @@ const NavbarMain = () => {
                   {/* Our Mission */}
                   <a
                     className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2 text-nowrap"
-                    href="#mission-target"
+                    href="#mission"
                   >
-                    მისია
+                    {props.lang ? "მისია" : "Mission"}
                   </a>
                 </li>
 
@@ -213,9 +258,9 @@ const NavbarMain = () => {
                   {/* About Us */}
                   <a
                     className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2 text-nowrap"
-                    href="#about-target"
+                    href="#about"
                   >
-                    რატომ ჩვენ?
+                    {props.lang ? "რატომ ჩვენ?" : "Why us?"}
                   </a>
                 </li>
 
@@ -223,9 +268,9 @@ const NavbarMain = () => {
                   {/* Testimonials */}
                   <a
                     className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2 text-nowrap"
-                    href="#testimonials-target"
+                    href="#testimonials"
                   >
-                    შეფასება
+                    {props.lang ? "შეფასება" : "Testimonials"}
                   </a>
                 </li>
 
@@ -233,12 +278,35 @@ const NavbarMain = () => {
                   {/* Contact Us */}
                   <a
                     className="px-1 nav-link nav-link-hover mx-0 mx-lg-1 mx-xl-2 fs-xl-1 text-nowrap"
-                    href="#contact-target"
+                    href="#contact"
                   >
-                    პარტნიორები
+                    {props.lang ? "პარტნიორები" : "Partners"}
                   </a>
                 </li>
               </ul>
+              <label id="language-label">
+                <img
+                  className={props.lang ? "active-flag" : "inactive-flag"}
+                  src={ge}
+                  alt="georgian flag"
+                  width={"120"}
+                  height={"60"}
+                />
+                <button
+                  id="language-toggle"
+                  onClick={props.setLang}
+                  type={"checkbox"}
+                >
+                  {props.lang ? "GE" : "EN"}
+                </button>
+                <img
+                  className={props.lang ? "inactive-flag" : "active-flag"}
+                  src={eng}
+                  alt="english flag"
+                  width={"120"}
+                  height={"60"}
+                />
+              </label>
             </div>
           </div>
         </nav>

@@ -4,7 +4,7 @@ const About = () => {
     <>
       <style>{`
             
-            #about p {
+            #about-section p {
                 font-weight: 400;
                 font-family: 'Inter', san-serif;
             }
@@ -12,8 +12,11 @@ const About = () => {
           
             
         `}</style>
-      <section id="about" className="container-fluid px-0 p-md-5 bg-white">
-        <div id="about-target" className="link-target"></div>
+      <section
+        id="about-section"
+        className="container-fluid px-0 p-md-5 bg-white"
+      >
+        <div id="about" className="link-target"></div>
         <div className="container d-flex flex-column-reverse flex-lg-row py-5">
           <div className="col col-lg-6 text-center text-lg-start m-auto px-0 px-lg-5">
             {/* About Us */}

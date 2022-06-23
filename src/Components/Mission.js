@@ -4,7 +4,7 @@ const Mission = () => {
     <>
       <style>{`
             
-            #mission p {
+            #mission-section p {
               font-weight: 400;
               font-family: 'Inter', san-serif;
             }
@@ -12,8 +12,11 @@ const Mission = () => {
             
             
         `}</style>
-      <section id="mission" className="container-fluid px-0 p-md-5 bg-white">
-        <div id="mission-target" className="link-target"></div>
+      <section
+        id="mission-section"
+        className="container-fluid px-0 p-md-5 bg-white"
+      >
+        <div id="mission" className="link-target"></div>
         <div className="container d-flex flex-column flex-lg-row py-5 mt-5">
           <div className="col col-lg-6 text-center mb-5 mx-auto">
             <img

@@ -14,8 +14,8 @@ const ContactUs = () => {
         }
 
     `}</style>
-      <section id="contact" className="px-0 mb-5 px-md-5 bg-white">
-        <div id="contact-target" className="link-target"></div>
+      <section id="contact-section" className="px-0 mb-5 px-md-5 bg-white">
+        <div id="contact" className="link-target"></div>
         <div className="container-fluid py-5 px-md-5 pb-3">
           <div className="col text-center">
             {/* Contact Us */}

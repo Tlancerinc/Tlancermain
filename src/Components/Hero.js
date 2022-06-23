@@ -81,7 +81,7 @@ const Hero = () => {
         
       `}</style>
       <section className="position-relative" id="hero">
-        <div id="hero-target" className="link-target mb-5"></div>
+        <div id="home" className="link-target mb-5"></div>
         <img
           className="display-md-none hero-container-deco"
           src={vector}

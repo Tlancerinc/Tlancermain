@@ -27,33 +27,30 @@ const Student = (props) => {
     const surName = document.getElementById("last-name-student");
     const email = document.getElementById("email-student");
     const phone = document.getElementById("phone-student");
+    const data = {
+      lang: "en",
+      type: "Student",
+      name: `${firstName.value} ${surName.value}`,
+      email: `${email.value}`,
+      mobile: `${phone.value}`,
+    };
     const requestSettings = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json",
       },
-      body: JSON.stringify({
-        name: `${firstName.value}`,
-        surname: `${surName.value}`,
-        email: `${email.value}`,
-        phone: `${phone.value}`,
-        role: "Student",
-      }),
+      body: JSON.stringify(data),
     };
-
     try {
       setModalIsOpen(true);
-      setIsLoading(true);
       const formResponse = await fetch(
-        "https://formsubmit.co/ajax/tlancerinc@gmail.com",
+        "https://tlancer.herokuapp.com/api/registration/",
         requestSettings
       );
       if (!formResponse.ok) {
         throw new Error("Error during form submission");
       } else {
         const data = await formResponse.json();
-        setIsLoading(false);
         console.log("***fetch ran " + data);
       }
     } catch (e) {
@@ -74,7 +71,6 @@ const Student = (props) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json",
       },
       body: JSON.stringify({
         parentName: `${parentFirstName.value}`,
@@ -91,7 +87,7 @@ const Student = (props) => {
       setModalIsOpen(true);
       setIsLoading(true);
       const formResponse = await fetch(
-        "https://formsubmit.co/ajax/tlancerinc@gmail.com",
+        "https://tlancer.herokuapp.com/api/registration",
         parentRequestSettings
       );
       if (!formResponse.ok) {
@@ -183,8 +179,8 @@ const Student = (props) => {
           disableStudentForm();
         }}
       />
-      <section id="student" className="px-0 pb-md-5 bg-white">
-        <div id="student-target" className="link-target"></div>
+      <section id="student-section" className="px-0 pb-md-5 bg-white">
+        <div id="student" className="link-target"></div>
 
         <div className="container-fluid">
           <svg

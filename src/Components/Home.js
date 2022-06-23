@@ -47,14 +47,14 @@ const Home = () => {
     <>
       <NavbarMain lang={language} setLang={() => toggleLanguageHandler()} />
 
-      <Hero />
-      <Student />
-      <Tutor />
-      <Mission />
-      <About />
-      <Testimonies />
-      <ContactUs />
-      <Footer />
+      <Hero lang={language} />
+      <Student lang={language} />
+      <Tutor lang={language} />
+      <Mission lang={language} />
+      <About lang={language} />
+      <Testimonies lang={language} />
+      <ContactUs lang={language} />
+      <Footer lang={language} />
     </>
   );
 };
