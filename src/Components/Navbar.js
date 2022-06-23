@@ -79,11 +79,11 @@ const NavbarMain = (props) => {
 
              #language-toggle {
               margin: 0 .5rem;
-              border: none;
+              border: 2px solid var(--main-green);
               background: var(--main-green);
               padding: 0 1rem;
               font-weight: bold;
-              border-radius: 8px;
+              border-radius: 8px;              
              }
 
              #language-toggle:hover {
