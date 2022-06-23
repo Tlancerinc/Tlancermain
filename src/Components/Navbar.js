@@ -47,7 +47,13 @@ const NavbarMain = (props) => {
               display: flex;
               align-items: center;
               justify-content: center;
-             }              
+              cursor: pointer;
+             } 
+             
+             #language-label:hover {
+
+             }             
+             
              #language-label img {
               max-width: 2.5rem;
               max-height: 1.5rem;              
@@ -78,6 +84,10 @@ const NavbarMain = (props) => {
               padding: 0 1rem;
               font-weight: bold;
               border-radius: 8px;
+             }
+
+             #language-toggle:hover {
+              background: var(--main-green-hover);
              }
 
              {/* ######## END LANGUAGE TOGGLER ########*/}

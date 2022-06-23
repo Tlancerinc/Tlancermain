@@ -1,6 +1,6 @@
 import heroImg from "../images/hero-img.webp";
 import vector from "../images/GiantGreen.svg";
-const Hero = () => {
+const Hero = (props) => {
   console.log("hero rendered");
   return (
     <>
@@ -100,11 +100,14 @@ const Hero = () => {
           <div className="col-md-6 col-lg-5 px-lg-0 mb-0 py-5 my-xl-5 text-xl-start">
             <h1 className="display-6 display-md-1 fw-bold lh-base">
               {/* Learn from <br /> certified and experienced tutors */}
-              ისწავლე გამოცდილი მასწავლებლებისგან
+              {props.lang
+                ? "ისწავლე გამოცდილი მასწავლებლებისგან"
+                : "Learn from certified and experienced tutors"}
             </h1>
             <p className="h5 fw-normal my-5 pb-2">
-              დაუკავშირდი მასწავლებლებს და ციფრულად მართე სწავლის პროცესი
-              ჩვენთან ერთად
+              {props.lang
+                ? "დაუკავშირდი მასწავლებლებს და ციფრულად მართე სწავლის პროცესი ჩვენთან ერთად"
+                : "Connect with teachers and digitally manage the learning process with us"}
             </p>
             {/* Get Started */}
             <a
@@ -112,7 +115,7 @@ const Hero = () => {
               href="#hero-btn-target"
               className="btn px-5 btn-lg text-white"
             >
-              დაიწყე
+              {props.lang ? "დაიწყე" : "Get Started"}
             </a>
           </div>
 
