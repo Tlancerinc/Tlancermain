@@ -47,7 +47,6 @@ const NavbarMain = (props) => {
               display: flex;
               align-items: center;
               justify-content: center;
-              margin-left: 2rem;
              }              
              #language-label img {
               max-width: 2.5rem;
@@ -213,7 +212,7 @@ const NavbarMain = (props) => {
               className="navbar-collapse collapse w-100"
               id="responsive-navbar-nav"
             >
-              <ul className="nav navbar-nav w-100 justify-content-end">
+              <ul className="nav navbar-nav w-100 justify-content-end mb-5 mb-md-0">
                 <li className="nav-item mb-md-0">
                   {/* HOME */}
                   <a
@@ -284,7 +283,7 @@ const NavbarMain = (props) => {
                   </a>
                 </li>
               </ul>
-              <label id="language-label">
+              <label id="language-label" className="ms-md-3">
                 <img
                   className={props.lang ? "active-flag" : "inactive-flag"}
                   src={ge}
