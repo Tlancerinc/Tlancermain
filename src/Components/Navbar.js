@@ -304,7 +304,7 @@ const NavbarMain = (props) => {
                 <button
                   id="language-toggle"
                   onClick={props.setLang}
-                  type={"checkbox"}
+                  type={"button"}
                 >
                   {props.lang ? "GE" : "EN"}
                 </button>

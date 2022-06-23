@@ -29,7 +29,7 @@ const Student = (props) => {
     const email = document.getElementById("email-student");
     const phone = document.getElementById("phone-student");
     const data = {
-      lang: "en",
+      lang: `${props.lang ? "ge" : "en"}`,
       type: "Student",
       name: `${firstName.value} ${surName.value}`,
       email: `${email.value}`,
@@ -74,7 +74,7 @@ const Student = (props) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        lang: "en",
+        lang: `${props.lang ? "ge" : "en"}`,
         type: "Parent",
         name: `${parentFirstName.value} ${parentSurName.value}`,
         child_name: `${childFirstName.value} ${childSurName.value}`,

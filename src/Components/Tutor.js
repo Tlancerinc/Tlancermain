@@ -27,7 +27,7 @@ const Tutor = (props) => {
     const phone = document.getElementById("phone-tutor");
     const subjectTutor = document.getElementById("subject-tutor");
     const data = {
-      lang: "en",
+      lang: `${props.lang ? "ge" : "en"}`,
       type: "Tutor",
       subject: `${subjectTutor.value}`,
       name: `${firstName.value} ${surName.value}`,
