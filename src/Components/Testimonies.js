@@ -1,4 +1,4 @@
-const Testimonies = () => {
+const Testimonies = (props) => {
   console.log("Testimonials rendered");
   return (
     <>
@@ -85,7 +85,11 @@ const Testimonies = () => {
             <div className="col text-center col-md-10 mx-auto mb-5 d-flex align-items-center justify-content-evenly">
               <i className="fa-solid fa-quote-left red-quote"></i>
               {/* Testimonies from Our Customers */}
-              <h2 className="h1 fw-bold">მომხმარებელთა შეფასება</h2>
+              <h2 className="h1 fw-bold">
+                {props.lang
+                  ? "მომხმარებელთა შეფასება"
+                  : "Customer Testimonials"}
+              </h2>
               <i className="fa-solid fa-quote-right red-quote"></i>
             </div>
           </div>
@@ -97,14 +101,18 @@ const Testimonies = () => {
                 <i className="fa-solid fa-quote-left blue-quote mt-5"></i>
                 <div className="card-text">
                   <p className="lh-lg text-black fw-bold text-opacity-75 mb-4">
-                    სწრაფი, მოსახერხებელი და კომფორტული საშუალებაა ონლაინ
-                    კურსების შესასწავლად. თილანსერის სივრცე ძალიან დამეხმარა
-                    მარტივად შემესწავლა ქოფირაითინგი სულ რაღაც 3 თვეში.
+                    {props.lang
+                      ? "სწრაფი, მოსახერხებელი და კომფორტული საშუალებაა ონლაინ კურსების შესასწავლად. თილანსერის სივრცე ძალიან დამეხმარა მარტივად შემესწავლა ქოფირაითინგი სულ რაღაც 3 თვეში."
+                      : "A fast and convenient way to study online courses. The Tlancer space has helped me a lot to easily learn copying in just 3 months."}
                   </p>
                 </div>
-                <div className="fw-bold card-title h5">ლუკა ბასილაძე</div>
+                <div className="fw-bold card-title h5">
+                  {props.lang ? "ლუკა ბასილაძე" : "Luka Basiladze"}
+                </div>
                 <div className="text-secondary card-subtitle h6 mb-5">
-                  აღმასრულებელი დირექტორი, თექლინქი
+                  {props.lang
+                    ? "აღმასრულებელი დირექტორი, თექლინქი"
+                    : "CEO, Theklink"}
                 </div>
               </div>
             </div>
@@ -117,16 +125,19 @@ const Testimonies = () => {
                 <i className="fa-solid fa-quote-left blue-quote"></i>
                 <div className="card-text">
                   <p className="lh-lg text-black fw-bold text-opacity-75 mb-4">
-                    თილანსერი დამეხმარა მასწავლებლის შერჩევაში და სტუდენტური
-                    მუშაობის გამარტივებაში. მარტივად ვიპოვე მათემატიკის
-                    მასწავლებელი და ახლა უკვე ციფრულად ვახერხებ საგაკვეთილო
-                    პროცესზე დასწრებას!
+                    {props.lang
+                      ? "თილანსერი დამეხმარა მასწავლებლის შერჩევაში და სტუდენტური მუშაობის გამარტივებაში. მარტივად ვიპოვე მათემატიკის მასწავლებელი და ახლა უკვე ციფრულად ვახერხებ საგაკვეთილო პროცესზე დასწრებას!"
+                      : "Tlancer helped me select a teacher and simplify student work. I easily found a math teacher and now I can digitally attend the lessons!"}
                   </p>
                 </div>
                 <div className="fw-bold card-title h5">
-                  გიორგი ასლამაზიშვილი
+                  {props.lang
+                    ? "გიორგი ასლამაზიშვილი"
+                    : "Giorgi Aslamazishvili"}
                 </div>
-                <div className="text-secondary card-subtitle h6">სტუდენტი</div>
+                <div className="text-secondary card-subtitle h6">
+                  {props.lang ? "სტუდენტი" : "Student"}
+                </div>
               </div>
             </div>
           </div>
@@ -142,13 +153,16 @@ const Testimonies = () => {
                 <i className="fa-solid fa-quote-left blue-quote"></i>
                 <div className="card-text">
                   <p className="lh-lg text-black fw-bold text-opacity-75 mb-4">
-                    მარტივად გავიარე რეგისტრაცია და დავიწყე ჯგუფების შექმნა.
-                    თილანსერთან ერთად მიმარტივდება სალექციო პროცესების მართვა
+                    {props.lang
+                      ? "მარტივად გავიარე რეგისტრაცია და დავიწყე ჯგუფების შექმნა. თილანსერთან ერთად მიმარტივდება სალექციო პროცესების მართვა"
+                      : "I simply went through the registration and started creating groups. Learning processes are simplified with Tlancer."}
                   </p>
                 </div>
-                <div className="fw-bold card-title h5">ელზა ფულაძე</div>
+                <div className="fw-bold card-title h5">
+                  {props.lang ? "ელზა ფულაძე" : "Elza Fuladze"}
+                </div>
                 <div className="text-secondary card-subtitle h6">
-                  ფიზიკის მასწავლებელი
+                  {props.lang ? "ფიზიკის მასწავლებელი" : "Physics teacher"}
                 </div>
               </div>
             </div>
@@ -158,15 +172,18 @@ const Testimonies = () => {
                 <i className="fa-solid fa-quote-left blue-quote mt-5"></i>
                 <div className="card-text">
                   <p className="lh-lg text-black fw-bold text-opacity-75 mb-4">
-                    თილანსერი მართლაც, რომ მიგნებაა ჩემთვის. ფუნქციონალი
-                    მეხმარება კალენდარით ვმართო თავისუფალი დრო და უპრობლემოდ
-                    ჩავატარო ჯგუფური მეცადინეობები. მადლობა გუნდს ამ
-                    ტექნოლოგიისთვის!
+                    {props.lang
+                      ? "თილანსერი მართლაც, რომ მიგნებაა ჩემთვის. ფუნქციონალი მეხმარება კალენდარით ვმართო თავისუფალი დრო და უპრობლემოდ ჩავატარო ჯგუფური მეცადინეობები. მადლობა გუნდს ამ ტექნოლოგიისთვის!"
+                      : "Tlancer is really that finding for me. It's functionality helps me manage my free time with the calander and conduct group lessons without any problems. Thanks to the team for this technology!"}
                   </p>
                 </div>
-                <div className="fw-bold card-title h5">ანზორ ქევხიშვილი</div>
+                <div className="fw-bold card-title h5">
+                  {props.lang ? "ანზორ ქევხიშვილი" : "Anzor Kevkhishvili"}
+                </div>
                 <div className="text-secondary card-subtitle h6 mb-5">
-                  ლექტორი, პროგრამირება
+                  {props.lang
+                    ? "ლექტორი, პროგრამირება"
+                    : "Lecturer, Programming"}
                 </div>
               </div>
             </div>

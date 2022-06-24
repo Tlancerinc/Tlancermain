@@ -40,7 +40,9 @@ const Footer = (props) => {
                   {props.lang ? "თილანსერი" : "Tlancer"}
                 </h2>
 
-                <p className="h6 lh-base fw-normal">საგანმანათლებლო სივრცე</p>
+                <p className="h6 lh-base fw-normal">
+                  {props.lang ? "საგანმანათლებლო სივრცე" : "Educational space"}
+                </p>
               </div>
               {/* _____ Social Icon Row  */}
               <div className="row pt-4 align-items-center mb-0 mt-2">

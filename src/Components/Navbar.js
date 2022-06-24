@@ -46,7 +46,7 @@ const NavbarMain = (props) => {
              #language-label {
               display: flex;
               align-items: center;
-              justify-content: center;
+              justify-content: space-between;
               cursor: pointer;
              } 
              
@@ -82,8 +82,9 @@ const NavbarMain = (props) => {
               border: 2px solid var(--main-green);
               background: var(--main-green);
               padding: 0 1rem;
+              font-size: .8rem;
               font-weight: bold;
-              border-radius: 8px;              
+              border-radius: 8px;            
              }
 
              #language-toggle:hover {
