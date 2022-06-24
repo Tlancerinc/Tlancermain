@@ -1,5 +1,5 @@
 import aboutImage from "../images/blueSuitMan.png";
-const About = () => {
+const About = (props) => {
   console.log("About rendered");
   return (
     <>
@@ -20,14 +20,13 @@ const About = () => {
         <div id="about" className="link-target"></div>
         <div className="container d-flex flex-column-reverse flex-lg-row py-5">
           <div className="col col-lg-6 text-center text-lg-start m-auto px-0 px-lg-5">
-            {/* About Us */}
-            <h2 className="fw-bold display-4 h1">რატომ ჩვენ?</h2>
+            <h2 className="fw-bold display-4 h1">
+              {props.lang ? "რატომ ჩვენ?" : "Why us?"}
+            </h2>
             <p className="fs-4 fw-light pb-lg-1 pt-2">
-              ჩვენ ვთავაზობთ მომხმარებლებს მარტივ, ხელმისაწვდომ და მოქნილ
-              მომსახურების სისტემას რომელიც, საშუალებას მისცემს, ერთის მხრივ,
-              მოსწავლეს მინიმალურ დროში და მინიმალური ძალისხმევით, იპოვოს
-              მისთვის საინტერესო კურსი, ხოლო, მეორეს მხრივ, მასწავლებელს,
-              შეიძინოს მუდმივი შემოსავლის წყარო.
+              {props.lang
+                ? "ჩვენ ვთავაზობთ მომხმარებლებს მარტივ, ხელმისაწვდომ და მოქნილ მომსახურების სისტემას რომელიც, საშუალებას მისცემს, ერთის მხრივ, მოსწავლეს მინიმალურ დროში და მინიმალური ძალისხმევით, იპოვოს მისთვის საინტერესო კურსი, ხოლო, მეორეს მხრივ, მასწავლებელს, შეიძინოს მუდმივი შემოსავლის წყარო."
+                : "We offer users a simple, accessible and flexible service system that will allow, on the one hand, the student to find a course of interest with minimal time and minimum effort, and, on the other hand, the teacher, to acquire a constant source of income."}
             </p>
           </div>
           <div className="col col-lg-6 text-center mb-5 mx-auto">

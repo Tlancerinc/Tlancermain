@@ -12,7 +12,7 @@ const Tutor = (props) => {
     setFormToggle(true);
   }
 
-  function disableTutorForm() {
+  function disableTutorForm(props) {
     const inputs = document.querySelectorAll(".t-input");
     inputs.forEach((e) => {
       e.disabled = true;
@@ -118,34 +118,30 @@ const Tutor = (props) => {
         <div className="container-fluid">
           <div className="container d-flex flex-column flex-lg-row mx-auto text-center text-lg-start form-cont">
             <div className="col-lg-6 px-0 order-2 order-lg-1 ps-lg-3 my-auto">
-              {/* Become a Tutor Today */}
               <h2 className={`fw-bold h1`}>
-                დარეგისტრირდი როგორც მასწავლებელი
+                {props.lang
+                  ? "დარეგისტრირდი როგორც მასწავლებელი"
+                  : "Register as a Teacher"}
               </h2>
               <p className="body-text fs-4 text-dark my-3">
-                {/* Join thousands of other instructors on Tlancer to teach millions
-                across the globe. We provide the tools and skills to teach what
-                you love. */}
-                შექმენით კურსები და დაიწყეთ მოსწავლეების მიღება ციფრულად
+                {props.lang
+                  ? "შექმენით კურსები და დაიწყეთ მოსწავლეების მიღება ციფრულად"
+                  : "Create courses and start teaching students digitally"}
               </p>
               <div className="container-fluid px-0 d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-lg-start">
                 <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2 bubble  bubble-red">
-                  {/* Group-conversations */}
-                  კურსების მენეჯმენტი
+                  {props.lang ? "კურსების მენეჯმენტი" : "Manage Courses"}
                 </div>
                 <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2 bubble  bubble-green">
-                  {/* Tlancer-powered messenger */}
-                  კალენდარი
+                  {props.lang ? "კალენდარი" : "Calendar"}
                 </div>
               </div>
               <div className="container-fluid px-0 d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-lg-start">
                 <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2 bubble  bubble-blue">
-                  {/* Financial management tools */}
-                  ფინანსური მენეჯერი
+                  {props.lang ? "ფინანსური მენეჯერი" : "Financial Manager"}
                 </div>
                 <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2 bubble  bubble-yellow">
-                  {/* Task management tools */}
-                  ვირტუალური შეხვედრები
+                  {props.lang ? "ვირტუალური შეხვედრები" : "Virtual Meetings"}
                 </div>
               </div>
               <button
@@ -158,8 +154,7 @@ const Tutor = (props) => {
                 }
                 aria-label="Toggle tutor sign-up form"
               >
-                რეგისტრაცია
-                {/* Sign Up Today */}
+                {props.lang ? "რეგისტრაცია" : "Registration"}
               </button>
               <div className="w-100">
                 <form
@@ -176,7 +171,7 @@ const Tutor = (props) => {
                     id="first-name-tutor"
                     className="my-3 fs-4 p-1 ps-2 rounded t-input"
                     type={"text"}
-                    placeholder="სახელი"
+                    placeholder={props.lang ? "სახელი" : "First Name"}
                     name="first-name"
                     required
                   />
@@ -184,7 +179,7 @@ const Tutor = (props) => {
                     id="last-name-tutor"
                     className="my-3 fs-4 p-1 ps-2 rounded t-input"
                     type={"text"}
-                    placeholder="გვარი"
+                    placeholder={props.lang ? "გვარი" : "Last Name"}
                     name="sur-name"
                     required
                   />
@@ -192,7 +187,7 @@ const Tutor = (props) => {
                     id="email-tutor"
                     className="my-3 fs-4 p-1 ps-2 rounded t-input"
                     type={"email"}
-                    placeholder="ელ-ფოსტა"
+                    placeholder={props.lang ? "ელ-ფოსტა" : "E-mail"}
                     name="e-mail"
                     required
                   />
@@ -200,7 +195,7 @@ const Tutor = (props) => {
                     id="phone-tutor"
                     className="my-3 fs-4 p-1 ps-2 rounded t-input"
                     type={"phone"}
-                    placeholder="მობილური"
+                    placeholder={props.lang ? "მობილური" : "Phone"}
                     name="phone-number"
                     required
                   />
@@ -208,7 +203,7 @@ const Tutor = (props) => {
                     id="subject-tutor"
                     className="my-3 fs-4 p-1 ps-2 rounded t-input"
                     type={"text"}
-                    placeholder="საგანი"
+                    placeholder={props.lang ? "საგანი" : "Subject"}
                     name="subject-tutor"
                     required
                   />
@@ -216,14 +211,8 @@ const Tutor = (props) => {
                     type="submit"
                     className="tutor-btn mt-3 px-2 btn btn-lg text-nowrap w-100 t-input"
                   >
-                    გაგზავნა
+                    {props.lang ? "გაგზავნა" : "Send"}
                   </button>
-                  {/* <button
-                  type="reset"
-                  className="tutor-btn mt-2 px-3 btn btn-primary"
-                >
-                  Reset
-                </button> */}
                 </form>
               </div>
             </div>

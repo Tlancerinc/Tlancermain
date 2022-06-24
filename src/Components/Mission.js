@@ -1,5 +1,5 @@
 import missionImage from "../images/manHoldingRedFolder.png";
-const Mission = () => {
+const Mission = (props) => {
   console.log("Mission Rendered");
   return (
     <>
@@ -30,12 +30,13 @@ const Mission = () => {
           </div>
           <div className="col col-lg-6 text-center text-lg-start m-auto px-0 px-lg-5">
             {/* Our Mission */}
-            <h2 className="fw-bold display-4 h1">მისია</h2>
+            <h2 className="fw-bold display-4 h1">
+              {props.lang ? "მისია" : "Mission"}
+            </h2>
             <p className="fs-4 fw-light pb-lg-1 pt-2">
-              თილანსერი მიზნად ისახავს, შექმნას ულიმიტო საგანმანათლებლო სივრცე
-              მოტივირებული ადამიანებისთვის გლობალური მასშტაბით, სადაც მათ
-              საშუალება ექნებათ, შეისწავლონ მათთვის საინტერესო კურსები, სახლიდან
-              გაუსვლელად.
+              {props.lang
+                ? "თილანსერი მიზნად ისახავს, შექმნას ულიმიტო საგანმანათლებლო სივრცე მოტივირებული ადამიანებისთვის გლობალური მასშტაბით, სადაც მათ საშუალება ექნებათ, შეისწავლონ მათთვის საინტერესო კურსები, სახლიდან გაუსვლელად."
+                : "Tlancer aims to create an unlimited educational space for motivated people on a global scale, where they will be able to explore courses that interest them, without ever leaving home."}
             </p>
           </div>
         </div>

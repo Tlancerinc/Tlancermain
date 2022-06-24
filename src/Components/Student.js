@@ -215,33 +215,32 @@ const Student = (props) => {
 
           <div className="container d-flex flex-column-reverse flex-lg-row-reverse mx-auto text-center text-lg-start form-cont">
             <div className="col-lg-6 px-0 ps-lg-3 my-auto">
-              {/* Register and join other students */}
-              <h2 className={`fw-bold h1`}>დარეგისტრირდი როგორც სტუდენტი</h2>
+              <h2 className={`fw-bold h1`}>
+                {props.lang
+                  ? "დარეგისტრირდი როგორც სტუდენტი"
+                  : "Register as a Student"}
+              </h2>
               <p id="hero-btn-target" className="body-text fs-4 text-dark my-3">
-                {/* Join thousands of other students on Tlancer to teach millions
-                across the globe. We provide the tools and skills to teach what
-                you love. */}
-                ჩვენ გიმარტივებთ მასწავლებლების პოვნისა და მათთან დაკავშირების
-                საშუალებას სრულიად უფასოდ
+                {props.lang
+                  ? "ჩვენ გიმარტივებთ მასწავლებლების პოვნისა და მათთან დაკავშირების საშუალებას სრულიად უფასოდ"
+                  : "We make it easy for you to find and connect with teachers for free"}
               </p>
               <div className="container-fluid px-0 d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-lg-start mt-lg-5">
                 <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2 bubble bubble-red">
-                  {/* AI-powered matching */}
-                  ონლაინ ინტერაქციები
+                  {props.lang ? "ონლაინ ინტერაქციები" : "Online Interactions"}
                 </div>
                 <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2 bubble bubble-green">
-                  {/* 100% free matching */}
-                  გამოცდილი მასწავლებლები
+                  {props.lang
+                    ? "გამოცდილი მასწავლებლები"
+                    : "Experienced teachers"}
                 </div>
               </div>
               <div className="container-fluid px-0 d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-lg-start">
                 <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2 bubble bubble-blue">
-                  {/* NFT Certtificatons */}
-                  ურისკო გადახდები
+                  {props.lang ? "ურისკო გადახდები" : "Risk payments"}
                 </div>
                 <div className="text-nowrap px-4 course fw-bold text-center py-2 ms-md-0 me-md-4 my-2 bubble bubble-yellow">
-                  {/* Offline interactions */}
-                  დავალებების მენეჯმენტი
+                  {props.lang ? "დავალებების მენეჯმენტი" : "Manage assignments"}
                 </div>
               </div>
               <button
@@ -254,8 +253,7 @@ const Student = (props) => {
                 }
                 aria-label="Toggle tutor sign-up form"
               >
-                {/* Sign Up Today */}
-                რეგისტრაცია
+                {props.lang ? "რეგისტრაცია" : "Registration"}
               </button>
               <div className="col col-lg-7 d-flex flex-column align-items-center">
                 <div
@@ -275,7 +273,7 @@ const Student = (props) => {
                       toggleTab(1);
                     }}
                   >
-                    სტუდენტი
+                    {props.lang ? "სტუდენტი" : "Student"}
                   </button>
                   <button
                     className={
@@ -287,7 +285,7 @@ const Student = (props) => {
                       toggleTab(2);
                     }}
                   >
-                    მშობელი
+                    {props.lang ? "მშობელი" : "Parent"}
                   </button>
                 </div>
                 <div className="content-tabs w-100">
@@ -313,7 +311,7 @@ const Student = (props) => {
                       id="first-name-student"
                       className="my-3 fs-4 p-1 ps-2 rounded s-input"
                       type="text"
-                      placeholder="სახელი"
+                      placeholder={props.lang ? "სახელი" : "First Name"}
                       name="name"
                       required
                     />
@@ -321,7 +319,7 @@ const Student = (props) => {
                       id="last-name-student"
                       className="my-3 fs-4 p-1 ps-2 rounded s-input"
                       type="text"
-                      placeholder="გვარი"
+                      placeholder={props.lang ? "გვარი" : "Last Name"}
                       name="surname"
                       required
                     />
@@ -329,7 +327,7 @@ const Student = (props) => {
                       id="email-student"
                       className="my-3 fs-4 p-1 ps-2 rounded s-input"
                       type={"email"}
-                      placeholder="ელ-ფოსტა"
+                      placeholder={props.lang ? "ელ-ფოსტა" : "E-mail"}
                       name="email"
                       required
                     />
@@ -337,7 +335,7 @@ const Student = (props) => {
                       id="phone-student"
                       className="my-3 fs-4 p-1 ps-2 rounded s-input"
                       type={"phone"}
-                      placeholder="მობილური"
+                      placeholder={props.lang ? "მობილური" : "Phone"}
                       name="phone"
                       required
                     />
@@ -346,14 +344,8 @@ const Student = (props) => {
                       type="submit"
                       className="tutor-btn mt-3 px-2 btn btn-lg text-nowrap w-100 s-input"
                     >
-                      გაგზავნა
+                      {props.lang ? "გაგზავნა" : "Parent"}
                     </button>
-                    {/* <button
-                    type="reset"
-                    className="tutor-btn mt-3 px-2 btn btn-lg"
-                  >
-                    Reset
-                  </button> */}
                   </form>
 
                   {/* Parent Form */}
@@ -378,7 +370,9 @@ const Student = (props) => {
                       id="first-name-parent"
                       className="my-3 fs-4 p-1 ps-2 rounded s-input"
                       type="text"
-                      placeholder="მშობლის სახელი"
+                      placeholder={
+                        props.lang ? "მშობლის სახელი" : "Parent First Name"
+                      }
                       name="name"
                       required
                     />
@@ -386,7 +380,9 @@ const Student = (props) => {
                       id="last-name-parent"
                       className="my-3 fs-4 p-1 ps-2 rounded s-input"
                       type="text"
-                      placeholder="მშობლის გვარი"
+                      placeholder={
+                        props.lang ? "მშობლის გვარი" : "Parent Last Name"
+                      }
                       name="surname"
                       required
                     />
@@ -394,7 +390,9 @@ const Student = (props) => {
                       id="child-first-name"
                       className="my-3 fs-4 p-1 ps-2 rounded s-input"
                       type="text"
-                      placeholder="ბავშვის სახელი"
+                      placeholder={
+                        props.lang ? "ბავშვის სახელი" : "Child's First Name"
+                      }
                       name="child-first-name"
                       required
                     />
@@ -402,7 +400,9 @@ const Student = (props) => {
                       id="child-surname"
                       className="my-3 fs-4 p-1 ps-2 rounded s-input"
                       type="text"
-                      placeholder="ბავშვის გვარი"
+                      placeholder={
+                        props.lang ? "ბავშვის გვარი" : "Child's Last Name"
+                      }
                       name="child-surname"
                       required
                     />
@@ -410,7 +410,9 @@ const Student = (props) => {
                       id="email-parent"
                       className="my-3 fs-4 p-1 ps-2 rounded s-input"
                       type={"email"}
-                      placeholder="მშობლის ელ-ფოსტა"
+                      placeholder={
+                        props.lang ? "მშობლის ელ-ფოსტა" : "Parent E-mail"
+                      }
                       name="parent-email"
                       required
                     />
@@ -418,7 +420,7 @@ const Student = (props) => {
                       id="phone-parent"
                       className="my-3 fs-4 p-1 ps-2 rounded s-input"
                       type={"phone"}
-                      placeholder="მობილური"
+                      placeholder={props.lang ? "მობილური" : "Parent Phone"}
                       name="parent-phone"
                       required
                     />
@@ -427,11 +429,8 @@ const Student = (props) => {
                       type="submit"
                       className="tutor-btn mt-3 px-2 btn btn-lg text-nowrap w-100 s-input"
                     >
-                      გაგზავნა
+                      {props.lang ? "გაგზავნა" : "Send"}
                     </button>
-                    {/* <button type="reset" className="tutor-btn mt-3 px-2 btn btn-lg">
-                  Reset
-                </button> */}
                   </form>
                 </div>
               </div>
