@@ -57,12 +57,13 @@ const Hero = (props) => {
 
         @media (min-width: 515px) {
           .hero-container-deco {
-            bottom: 6rem;
-            right: 22rem;
-          }
-          .deco-2 {
+            
             bottom: 8rem;
             right: 15rem;
+          }
+          .deco-2 {
+            bottom: 6rem;
+            right: 22rem;
           }
         }
 

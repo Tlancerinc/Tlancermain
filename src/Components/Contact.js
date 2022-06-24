@@ -2,16 +2,24 @@ import microsoft from "../images/MicrosoftLogo.webp";
 import tecklink from "../images/techLink.webp";
 import tbc from "../images/tbcBank.webp";
 import bankOfGeorgia from "../images/bankOfGeorgia.webp";
-const ContactUs = () => {
+const ContactUs = (props) => {
   console.log("Contact Us rendered");
   return (
     <>
       <style>{`
         .tl-logo {
           width: 25%;
+          transition: .3s ease-in-out;
+        }
+        .tl-logo:hover {
+          transform: scale(1.2);
         }
         .partner {
           width: 75%;
+          transition: .3s ease-in-out;
+        }
+        .partner:hover {
+          transform: scale(1.2);          
         }
 
     `}</style>
@@ -19,8 +27,10 @@ const ContactUs = () => {
         <div id="contact" className="link-target"></div>
         <div className="container-fluid py-5 px-md-5 pb-3">
           <div className="col text-center">
-            {/* Contact Us */}
-            <h2 className="h1 fw-bold">პარტნიორები</h2>
+            {/* Partners */}
+            <h2 className="h1 fw-bold">
+              {props.lang ? "პარტნიორები" : "Partners"}
+            </h2>
           </div>
           <div className="text-center container-fluid my-5 px-4">
             <div className="row align-items-center justify-content-between">

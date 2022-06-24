@@ -1,4 +1,4 @@
-const Footer = () => {
+const Footer = (props) => {
   console.log("Footer rendered");
   const date = new Date();
   const year = date.getFullYear();
@@ -36,13 +36,19 @@ const Footer = () => {
 
             <div className="col-10">
               <div className="col ms-0 ps-0 border-bottom border-light">
-                <h2 className="fw-bold display-5 text-white">თილანსერი</h2>
+                <h2 className="fw-bold display-5 text-white">
+                  {props.lang ? "თილანსერი" : "Tlancer"}
+                </h2>
+
                 <p className="h6 lh-base fw-normal">საგანმანათლებლო სივრცე</p>
               </div>
               {/* _____ Social Icon Row  */}
               <div className="row pt-4 align-items-center mb-0 mt-2">
                 <div className="h6 col-10 px-0 col-lg-5 mx-auto mx-lg-0 text-center text-lg-start fw-light mb-4 mb-lg-0">
-                  © {year} თილანსერი ყველა უფლება დაცულია
+                  © {year}
+                  {props.lang
+                    ? " თილანსერი ყველა უფლება დაცულია"
+                    : " Tlancer All rights reserved."}
                 </div>
                 <div className="col-lg-2"></div>
                 <div className="col-lg-5">
