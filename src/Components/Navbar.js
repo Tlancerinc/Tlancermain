@@ -46,7 +46,7 @@ const NavbarMain = (props) => {
              #language-label {
               display: flex;
               align-items: center;
-              justify-content: space-between;
+              justify-content: center;
               cursor: pointer;
              } 
              
