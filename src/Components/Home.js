@@ -17,7 +17,6 @@ const Home = () => {
     setLanguage(!language);
     console.log("language toggled");
   };
-
   // const studentFormRef = useRef();
   // const heroRef = useRef();
   // const [studentFormRefIsVisible, setStudentFormRefIsVisible] = useState();

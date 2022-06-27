@@ -19,6 +19,10 @@ const NavbarMain = (props) => {
       console.log("added event listener");
       menuLinks[i].addEventListener("click", menuLinkHandler);
     }
+    const sections = document.querySelectorAll("section");
+    sections.forEach((section) =>
+      section.addEventListener("click", menuLinkHandler)
+    );
   }, []);
 
   return (
